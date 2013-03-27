@@ -608,7 +608,11 @@ class BizDeadlines
 	 */
 	static public function canPassDeadlineToChild( $objectType )
 	{
-		static $canPassDeadlineToChild = array('Dossier' => true, 'Layout' => true, 'LayoutModule' => true );
+		if ( defined('IGNORE_DOSSIER_DEADLINE') && IGNORE_DOSSIER_DEADLINE == true ) {
+			static $canPassDeadlineToChild = array('Dossier' => false, 'Layout' => true, 'LayoutModule' => true );
+		} else {
+			static $canPassDeadlineToChild = array('Dossier' => true, 'Layout' => true, 'LayoutModule' => true );
+		}
 
 		$result = isset($canPassDeadlineToChild[$objectType]) ? $canPassDeadlineToChild[$objectType] : false;
 
