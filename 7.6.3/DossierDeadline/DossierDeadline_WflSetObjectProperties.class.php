@@ -25,8 +25,8 @@ class DossierDeadline_WflSetObjectProperties extends WflSetObjectProperties_Ente
                 #$now = mktime();
                 #file_put_contents(OUTPUTDIRECTORY . $now .'-'.$id.'-before', print_r($req, true));         
 
-                if (empty($deadline))
-                {
+                //if (empty($deadline))
+                //{
                     require_once dirname(__FILE__) . '/DossierDeadlineUtils.class.php';
                     $extraMetaData = DossierDeadlineUtils::getExtraMetaData($req->MetaData, 'DEADLINE');
                 
@@ -35,7 +35,7 @@ class DossierDeadline_WflSetObjectProperties extends WflSetObjectProperties_Ente
                         $deadline = $extraMetaData->Values[0];
                         $req->MetaData->WorkflowMetaData->Deadline = $deadline;
                     }
-                }
+                //}
             
                 #file_put_contents(OUTPUTDIRECTORY . $now .'-'.$id.'-after', print_r($req, true));          
             }
