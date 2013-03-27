@@ -451,7 +451,9 @@ class BizObject
 		$issueIdsDL = self::getTargetIssuesForDeadline( $object );
 		// If deadline is set and object has issues check if the set deadline is not beyond earliest possible deadline
 		if( $issueIdsDL && isset($newRow['deadline']) && $newRow['deadline'] ) {
-			BizDeadlines::checkDeadline($issueIdsDL, $newRow['section'], $newRow['deadline']);
+			if (! (defined('IGNORE_DOSSIER_DEADLINE') && (IGNORE_DOSSIER_DEADLINE == true) && $newRow['type'] == 'Dossier')) {
+				BizDeadlines::checkDeadline($issueIdsDL, $newRow['section'], $newRow['deadline']);
+			}
 		}
 		// If no deadline set, calculate deadline, else just store the deadline
 		$deadlinehard = '';
@@ -1143,7 +1145,9 @@ class BizObject
 		// If deadline is set and object has issues check if the set deadline is not beyond earliest possible deadline.
 		if( !$recalcdeadline && $issueIdsDL && isset($newRow['deadline']) && $newRow['deadline'] ) {
 			$deadlinehard = $newRow['deadline'];
-			BizDeadlines::checkDeadline($issueIdsDL, $newRow['section'], $newRow['deadline']);
+			if (! (defined('IGNORE_DOSSIER_DEADLINE') && (IGNORE_DOSSIER_DEADLINE == true) && $newRow['type'] == 'Dossier')) {
+				BizDeadlines::checkDeadline($issueIdsDL, $newRow['section'], $newRow['deadline']);
+			}
 		}
 
 		// In case state/category are changed a deadline set by hand is ignored
