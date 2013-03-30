@@ -177,7 +177,9 @@ class BizObject
 		$issueIdsDL = self::getTargetIssuesForDeadline( $object );
 		// Image/Article without object-target issue can inherit issues from relational-targets. BZ#21218
 
-		DBObject::objectSetDeadline( $id, $issueIdsDL, $arr["section"], $arr['state'] );
+		if (! (defined('IGNORE_DOSSIER_DEADLINE') && (IGNORE_DOSSIER_DEADLINE == true) && $object->MetaData->BasicMetaData->Type == 'Dossier')) {
+			DBObject::objectSetDeadline( $id, $issueIdsDL, $arr["section"], $arr['state'] );
+		}
 		
 		// If requested we lock the object
 		if ($lock)	{

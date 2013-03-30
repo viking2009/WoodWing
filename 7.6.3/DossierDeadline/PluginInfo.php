@@ -18,7 +18,7 @@ class DossierDeadline_EnterprisePlugin extends EnterprisePlugin
     {
         $info = new PluginInfoData();
         $info->DisplayName = 'DossierDeadline';
-        $info->Version     = 'v1.0a'; // don't use PRODUCTVERSION
+        $info->Version     = 'v1.0b'; // don't use PRODUCTVERSION
         $info->Description = 'Overrule for dossier deadline ( DossierDeadline )';
         $info->Copyright   = '(c) 2013 iCenter Ukraine LTD';
         return $info;
@@ -27,8 +27,8 @@ class DossierDeadline_EnterprisePlugin extends EnterprisePlugin
     final public function getConnectorInterfaces()
     {
         return array(   
-                //'WflCreateObjects_EnterpriseConnector'
-                'WflSetObjectProperties_EnterpriseConnector'
+                'WflCreateObjects_EnterpriseConnector'
+                //'WflSetObjectProperties_EnterpriseConnector'
                 );
     }
 
