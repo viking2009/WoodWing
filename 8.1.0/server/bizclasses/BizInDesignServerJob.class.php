@@ -4,6 +4,8 @@
  * @subpackage  BizClasses
  * @since       v4.2
  * @copyright   WoodWing Software bv. All Rights Reserved.
+ *
+ * v7.0.12 + startBackgroundJobs from v8.1.0 Build 28 
  */
 
 
