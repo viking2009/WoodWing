@@ -430,7 +430,8 @@ class BizInDesignServerJobs
 				if ($availableServers >= 1) { // there are more servers available
 					if ($availableServers > 1 && $morejobsavailable) {// More servers available for more jobs 
 						LogHandler::Log('idserver', 'INFO', "More servers [$availableServers] and jobs [$morejobsavailable] available, start new background job handler" );
-						self::startBackgroundJobs(true); // try to use as many servers as possible
+						#self::startBackgroundJobs(true); // try to use as many servers as possible
+						self::startBackgroundJobs(false); // try to use as many servers as possible
 					}
 					LogHandler::Log('idserver', 'INFO', "START handling job [$jobId] by background job handler [$handler_id]." );
 					self::runJob( $jobId, false, null );
@@ -442,7 +443,8 @@ class BizInDesignServerJobs
 		}
 		// clean up - we have time to purge now, running as background process
 		self::cleanupJobs();
-		self::startBackgroundJobs(true); // perhaps REQUEUED jobs...		
+		#self::startBackgroundJobs(true); // perhaps REQUEUED jobs...		
+		self::startBackgroundJobs(false); // perhaps REQUEUED jobs...		
 	}
 
 	/**
