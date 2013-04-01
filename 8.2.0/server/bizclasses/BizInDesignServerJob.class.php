@@ -4,8 +4,6 @@
  * @subpackage  BizClasses
  * @since       v4.2
  * @copyright   WoodWing Software bv. All Rights Reserved.
- *
- * v7.0.12 + startBackgroundJobs from v8.1.0 Build 28 
  */
 
 
@@ -119,96 +117,83 @@ class BizInDesignServerJobs
 	
 	public static function cleanupJobs() 
 	{
-		$dbh = DBDriverFactory::gen();
-		
-		$indservers = $dbh->tablename('indesignservers');
-		$indserverjobs = $dbh->tablename('indesignserverjobs');
 		$date = date('Y-m-d\TH:i:s', time());
 		
 		// remove all jobs older then 2 weeks ( automatic purge )
 		require_once BASEDIR.'/server/utils/DateTimeFunctions.class.php';
 		$purgedate = DateTimeFunctions::calcTime( $date, -1209600 ); 
-		$sql = "delete from $indserverjobs where queuetime <= '$purgedate'";
-		$sth = $dbh->query($sql);
-		if( is_null($sth) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-		}
+		$result = DBInDesignServerJob::delete('queuetime <= ?', array($purgedate));
+		if( DBInDesignServerJob::hasError() || is_null($result) ) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+		}		
 		
 		LogHandler::Log('idserver', 'INFO', "End certain jobs -> perhaps InDesign Server crashed..." );	
 		$checkdate = DateTimeFunctions::calcTime( $date, -180 );  // 3 min timeout
-		$sql = "select b.`id`, a.`hostname`, a.`portnumber`, b.`foreground`, b.`errormessage` ".
-		       " from $indservers a, $indserverjobs b " .
-		       " where a.`active` = 'on' ".
-		       " and a.`id` = b.`assignedserverid` ".
-		       " and b.`readytime` is null ".
-		         // job started 3 mins ago
-		       " and ( b.`starttime` <= '$checkdate' ".
-		         // or foreground job waiting for 3 mins for available server		       
-		         " or (b.`foreground` = 1 and b.`starttime` is null and b.`queuetime` <= '$checkdate'))";
-		$sth = $dbh->query($sql);
-		$timeOutDBStr = $dbh->toDBString( BizResources::localize('IDS_TIMEOUT') );
-		if ( $sth ) {
-			$row = $dbh->fetch($sth);
-			while ( $row )
-			{
-				$sql2 = '';
-				if ( $row['foreground'] != 1 ) {
-					$requeue = false;
-					$timeout = false;					
-					LogHandler::Log('idserver', 'INFO', "Background job running longer then 3 mins... [" . $row['id'] . "]");
-					$serverUrl = self::createURL($row['hostname']).':'.$row['portnumber'];	
-					LogHandler::Log('idserver', 'INFO', "Running on InDesign Server [$serverUrl]");
-					// background jobs running longer then 3 mins
-					if ( ! self::isResponsive($serverUrl) ) {
-						LogHandler::Log('idserver', 'INFO', "InDesign Server is no longer responsive");	
-						if ( $row['errorcode'] != -1 ) {
+		$activeJobs = DBInDesignServerJob::getActiveJobs($checkdate); 
+		$timeOutDBStr = BizResources::localize('IDS_TIMEOUT');
+		if ( $activeJobs ) foreach ( $activeJobs as $row ) {
+			$update = false;
+			if ( $row['foreground'] != 1 ) {
+				$requeue = false;
+				$timeout = false;
+				LogHandler::Log( 'idserver', 'INFO', "Background job running longer then 3 mins... [" . $row['id'] . "]" );
+				$serverUrl = self::createURL( $row['hostname'] ) . ':' . $row['portnumber'];
+				LogHandler::Log( 'idserver', 'INFO', "Running on InDesign Server [$serverUrl]" );
+				// background jobs running longer then 3 mins
+				if ( !self::isResponsive( $serverUrl ) ) {
+					LogHandler::Log( 'idserver', 'INFO', "InDesign Server is no longer responsive" );
+					if ( $row['errorcode'] != -1 ) {
+						$requeue = true;
+					} else {
+						$timeout = true;
+					}
+				} else {
+					LogHandler::Log( 'idserver', 'INFO', "InDesign Server is responsive..." );
+					// check if very small dummy job, on SAME server, is ready within 5 seconds, if so, server no longer busy...
+					if ( self::isHandlingJobs( $serverUrl ) ) {
+						LogHandler::Log( 'idserver', 'INFO', "InDesign Server is handling jobs, so no longer busy with ours..." );
+						if ( $row['errormessage'] != 'REQUEUED' ) {
 							$requeue = true;
 						} else {
 							$timeout = true;
 						}
 					} else {
-						LogHandler::Log('idserver', 'INFO', "InDesign Server is responsive...");							
-						// check if very small dummy job, on SAME server, is ready within 5 seconds, if so, server no longer busy...
-						if ( self::isHandlingJobs( $serverUrl ) ) {
-							LogHandler::Log('idserver', 'INFO', "InDesign Server is handling jobs, so no longer busy with ours...");
-							if ( $row['errormessage'] != 'REQUEUED' ) {
-								$requeue = true;
-							} else {							
-								$timeout = true;
-							}
-						} else {
-							LogHandler::Log('idserver', 'INFO', "indesign server is responsive and not handling jobs -> so must be busy with our current job" );
-						}
-					}
-					if ( $requeue ) {	
-						LogHandler::Log('idserver', 'INFO', "Requeue background job ");
-						$sql2 = "update $indserverjobs set `starttime` = null, `assignedserverid` = null, errormessage = 'REQUEUED' where `readytime` is null and `id` = ".$row['id'];
-					}
-					if ( $timeout ) {	
-						LogHandler::Log('idserver', 'INFO', "Job was already requeued before, set it to time-out");
-						$sql2 = "update $indserverjobs set `readytime` = '$date', `errorcode` = 'IDS_TIMEOUT', `errormessage` = '".$timeOutDBStr. "' where `readytime` is null and `id` = ".$row['id'];
+						LogHandler::Log( 'idserver', 'INFO', "indesign server is responsive and not handling jobs -> so must be busy with our current job" );
 					}
 				}
-				else {
-					LogHandler::Log('idserver', 'INFO', "Foreground job running longer then 3 mins... -> set TIMEOUT" );
-					$sql2 = "update $indserverjobs set `readytime` = '$date', `errorcode` = 'IDS_TIMEOUT', `errormessage` = '".$timeOutDBStr. "' where `readytime` is null and `id` = ".$row['id'];				
+				if ( $requeue ) {
+					LogHandler::Log( 'idserver', 'INFO', "Requeue background job " );
+					$values = array('starttime' => '', 'assignedserverid' => 0, 'errormessage' => 'REQUEUED'); 
+					$update = true;
 				}
-				if ( $sql2 != '') {
-					$sth2 = $dbh->query($sql2);
-					if( is_null($sth2) ) {
-						throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-					}
+				if ( $timeout ) {
+					LogHandler::Log( 'idserver', 'INFO', "Job was already requeued before, set it to time-out" );
+					$values = array('readytime' => $date, 'errorcode' => 'IDS_TIMEOUT', 'errormessage' => $timeOutDBStr); 
+					$update = true;
 				}
-				$row = $dbh->fetch($sth);
+			} else {
+				LogHandler::Log( 'idserver', 'INFO', "Foreground job running longer then 3 mins... -> set TIMEOUT" );
+				$values = array('readytime' => $date, 'errorcode' => 'IDS_TIMEOUT', 'errormessage' => $timeOutDBStr); 
+				$update = true;
+			}
+			if ( $update ) {
+				$where = "`readytime` = '' AND `id` = ? ";
+				$params = array( $row['id'] ); 
+				$result = DBInDesignServerJob::update($values, $where, $params);
+				if( DBInDesignServerJob::hasError() || $result === false ) {
+					throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+				}
 			}
 		}
 		
 		// end all foreground jobs never started and queued longer then 3 mins...
-		$sql = "update $indserverjobs set `readytime` = '$date', `errorcode` = 'IDS_TIMEOUT', `errormessage` = '".$timeOutDBStr. "' where `foreground` = 1 and `assignedserverid` is null and `readytime` is null and `queuetime` <= '$checkdate'";				
-		$sth = $dbh->query($sql);
-		if( is_null($sth) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-		}	
+		$values = array('readytime' => $date, 'errorcode' => 'IDS_TIMEOUT', 'errormessage' => $timeOutDBStr); 
+		$where = "`foreground` = ? AND `assignedserverid` = 0 AND `readytime` = '' AND `queuetime` <= ?";
+		$params = array(1, $checkdate); 
+		$result = DBInDesignServerJob::update($values, $where, $params);
+		if( DBInDesignServerJob::hasError() || $result === false ) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+		}
 	}
 	
 	/**
@@ -221,13 +206,12 @@ class BizInDesignServerJobs
 	
 	public static function removeJob( $jobid ) 
 	{
-		$dbh = DBDriverFactory::gen();
+		$where = '`id` = ?';
+		$params = array($jobid);
+		$result = DBInDesignServerJob::delete($where, $params);
 
-		$indserverjobs = $dbh->tablename('indesignserverjobs');		
-		$sql = "delete from $indserverjobs where `id` = $jobid";
-		$sth = $dbh->query($sql);
-		if( is_null($sth) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
+		if( DBInDesignServerJob::hasError() || is_null( $result )) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
 		}		
 	}
 	
@@ -241,15 +225,16 @@ class BizInDesignServerJobs
 	
 	public static function restartJob( $jobid ) 
 	{
-		$dbh = DBDriverFactory::gen();
 
-		$indserverjobs = $dbh->tablename('indesignserverjobs');	
-		// reset	
-		$sql = "update $indserverjobs set `assignedserverid` = null, `starttime` = null, `readytime` = null, `errorcode` = null, `errormessage` = null, `scriptresult` = null where `id` = $jobid";
-		$sth = $dbh->query($sql);
-		if( is_null($sth) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-		}		
+		// reset
+		$values = array('assignedserverid' => 0, 'starttime' => '', 'readytime' => '', 'errorcode' => '', 'errormessage' => '', 'scriptresult' => ''); 
+		$where = '`id` = ?';
+		$params = array($jobid); 
+		$result = DBInDesignServerJob::update($values, $where, $params);
+		if( DBInDesignServerJob::hasError() || $result === false ) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+		}
+		
 		// try to start new handler
 		self::startBackgroundJobs(false);
 	}	
@@ -270,9 +255,6 @@ class BizInDesignServerJobs
 	
 	public static function createJob( $scriptText, $params, $foreground, $jobType, $objId, $exclusiveLock, $serverVersion ) 
 	{
-		$dbh = DBDriverFactory::gen();
-
-		$indserverjobs = $dbh->tablename('indesignserverjobs');		
 		$date = date('Y-m-d\TH:i:s', time());
 
 		// prevent multiple background jobs with same task...
@@ -281,25 +263,30 @@ class BizInDesignServerJobs
 		}
 
 		// insert our new job
-		if (!$exclusiveLock) $exclusiveLock = 0;
-		if (!$foreground) $foreground = 0;
-		if (!$objId) $objId = 'null';
+		if (!$exclusiveLock) {$exclusiveLock = 0;}
+		if (!$foreground) {$foreground = 0;}
+		if (!$objId) {$objId = 0;} // Column cannot be null, has to be 0.
 		require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
 		$versionInfo = array();
 		DBVersion::splitMajorMinorVersion($serverVersion, $versionInfo);
-		$servermajorversion = $versionInfo['majorversion']; 
-		$serverminorversion = $versionInfo['minorversion'];
-		
-		$sql = "insert into $indserverjobs (`queuetime` , `foreground`, `jobscript`, `jobparams`, `jobtype`, `objid`, `exclusivelock`, `servermajorversion`, `serverminorversion`) ";
-		$sql .= "values ('$date', '$foreground', #BLOB#, ?, '$jobType',  $objId, '$exclusiveLock', $servermajorversion, $serverminorversion)";
-		$sql = $dbh->autoincrement($sql);
-		$sth = $dbh->query($sql, array( serialize($params) ), $scriptText);
-		if( is_null($sth) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-		}
 
+		$values = array('queuetime' => $date,
+						'foreground' => $foreground,
+						'jobscript' => '#BLOB#',
+						'jobparams' => serialize($params),
+						'jobtype' => $jobType,
+						'objid' => $objId,
+						'exclusivelock' => $exclusiveLock,
+						'servermajorversion' => $versionInfo['majorversion'], 
+						'serverminorversion' => $versionInfo['minorversion']);
+		
+		$result= DBInDesignServerJob::insert($values, $scriptText);
+
+		if( DBInDesignServerJob::hasError() || is_null($result) ) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+		}		
 		// return db generated job id
-		return $dbh->newid($indserverjobs, true);
+		return $result;  
 	}
 	
 	/**
@@ -310,7 +297,6 @@ class BizInDesignServerJobs
 	 * 
 	 * @return process handle id ( or -1 when error starting process )
 	 */	
-		
 	public static function execInBackground($command, $args = "") 
 	{
 		$return_value = 0;
@@ -324,11 +310,13 @@ class BizInDesignServerJobs
 		} else {
 			$output= array();
 			exec($command . " " . escapeshellarg($args) . " > /dev/null &", $output, $return_value);    
+			// BZ#27655: Do not use >2&1 since that makes the exec() call synchronous! 
+			// Therefore, partially rolled back CL#55346 fix, which was made for BZ#22789.
 		}
 		return $return_value;
 	}
 	
-		/**
+	/**
 	 * startBackgroundJobs - Starts background process to handle background jobs
 	 *  background jobs are handled by a seperate php page (InDesignServerBackGroundJobs.php)
 	 * 	  this php page is loaded in a new proces with help of CURL
@@ -410,46 +398,22 @@ class BizInDesignServerJobs
 	/**
 	 * runBackgroundJob - runs first background job available in jobs table
 	 *
-	 * @param dbdriver $dbh - database handle
-	 * 
 	 * @return nothing
 	 */			
 	
 	public static function runBackgroundJob( $dbh, $handler_id ) 
 	{
-		
-		$indservers = $dbh->tablename('indesignservers');			
-		$indserverjobs = $dbh->tablename('indesignserverjobs');
-		$objectlocks = $dbh->tablename('objectlocks');		
+		$dbh = $dbh; // To make analyzer happy.
 		$morejobsavailable = 1;
 		$lastProcessedJob = 0;
 		
 		while ( $morejobsavailable ) {
 			$morejobsavailable = 0;
-			// select first inserted background job (FIFO)
-			// when exclusivelock is requested, item should not exist in smart_objectlocks table
-			$sql = "select min(id) as firstjob, max(id) as maxjob ".
-							" from $indserverjobs ".
-							" where `foreground` = 0 ".
-// BZ#15335 not assigned ( NULL) or reserved ( -1 )
-							" AND ( `assignedserverid` IS NULL OR `assignedserverid` = -1 )".
-// not exclusive for a certain object	
-							" and ((`exclusivelock` = 0) or ". 
-// OR exclusive 
-							"      (`exclusivelock` = 1 and ".  
-// 		AND object not locked by other application
-							"        not exists ( select 1 from $objectlocks where `object` = $indserverjobs.`objid` ) and ".
-// 		AND not another job for same object running
-							"        not exists ( select 1 from $indserverjobs `j` where ( j.`assignedserverid` IS NOT NULL AND j.`assignedserverid` != -1 ) and `j`.`objid` = $indserverjobs.`objid` and `j`.`readytime` is null) ) ".
-							"     )";
-			$sth = $dbh->query($sql);
-			if( is_null($sth) ) {
-				throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-			}			
-
-			$row = $dbh->fetch($sth);
-			$jobId = $row['firstjob'];
-
+		  	$row = DBInDesignServerJob::getOldestBackgroundJob();
+			if ( is_null( $row )) {
+				throw new BizException( 'ERR_DATABASE', 'Server', '' ); //@todo proper error message
+			}				
+			$jobId = $row['firstjob']; 
 			// found job is valid AND not the only job available AND not same as last processed job
 			// BZ#11478 only run job if $jobId is valid
 			if ( !empty($jobId) && $jobId > 0 ){
@@ -458,15 +422,13 @@ class BizInDesignServerJobs
 					$lastProcessedJob = $jobId;
 				}
 				// check if available InDesign Servers
-				$sql = "select count(1) as cntservers from $indservers a where a.`active` = 'on' and not exists ( select 1 from $indserverjobs b where a.`id` = b.`assignedserverid` and b.`readytime` is null )";
-				$sth = $dbh->query($sql);
-				if( is_null($sth) ) {
-					throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-				}
-				$row = $dbh->fetch($sth);
-				$availableServers = $row ? $row['cntservers'] : 0;
+				require_once BASEDIR.'/server/dbclasses/DBInDesignServer.class.php';
+				$availableServers = DBInDesignServer::isTotalAvailable();
+				if ( is_null( $availableServers )) {
+					throw new BizException( 'ERR_DATABASE', 'Server', '' ); //@todo proper error message
+				}				
 				if ($availableServers >= 1) { // there are more servers available
-					if ($availableServers > 1 && $morejobsavailable) { 
+					if ($availableServers > 1 && $morejobsavailable) {// More servers available for more jobs 
 						LogHandler::Log('idserver', 'INFO', "More servers [$availableServers] and jobs [$morejobsavailable] available, start new background job handler" );
 						self::startBackgroundJobs(true); // try to use as many servers as possible
 					}
@@ -483,7 +445,7 @@ class BizInDesignServerJobs
 		self::startBackgroundJobs(true); // perhaps REQUEUED jobs...		
 	}
 
-/**
+	/**
 	 * Determines IDS instance that could run the given job.
 	 * It selects from configured IDSs that are active, responsive and capable to handle document version.
 	 * From those available IDSs, a random IDS is picked to do some kind of load balancing.
@@ -497,19 +459,22 @@ class BizInDesignServerJobs
 	{
 		require_once BASEDIR.'/server/dbclasses/DBInDesignServer.class.php';	
 
-		$tries = 1;
+		$tries = 0;
 		$maxtries = 60; // BZ#21109
 		$assignedserver = null;
 		$nonResponsiveServers = array();
 		$errCode = 'IDS_NOTAVAILABLE';
 
 		// get available InDesign Server ( with no job assigned currently )
-		while ( empty($assignedserver) && $tries <= $maxtries ) {
+		while ( empty($assignedserver) && $tries < $maxtries ) {
 			LogHandler::Log('idserver', 'DEBUG', "Find random available InDesign Server, try[$tries/$maxtries]" );
 			$tries++;
 			// 1 query to get all available servers...
 			$idserversrow = false;
 			$availableServers = DBInDesignServer::getAvailableServersForJob($jobId, $nonResponsiveServers);
+			if ( $tries === 1 ) {
+				$initialAvailableIDS = count( $availableServers );
+			}	
 			if ( is_null( $availableServers)) {
 				throw new BizException( 'ERR_DATABASE', 'Server', '' ); //@todo proper error message
 			}		
@@ -518,12 +483,11 @@ class BizInDesignServerJobs
 				$idserversrow = $availableServers[$randomKey];
 				unset($availableServers[$randomKey]);
 			}
-			while ( $idserversrow && empty($assignedserver) )
-			{
+			while ( $idserversrow && empty($assignedserver) ) {
 				$serverURL = self::createURL($idserversrow['hostname']).':'.$idserversrow['portnumber'];
 				LogHandler::Log('idserver', 'DEBUG', "Checking InDesign Server [" . $idserversrow['description'] . "] at URL [$serverURL]" );
 				$values =  array('assignedserverid' => $idserversrow['idsid']);
-				$where = "`id` = ? AND ( `assignedserverid` IS NULL OR `assignedserverid` = -1 )" ;
+				$where = "`id` = ? AND ( `assignedserverid` = 0 OR `assignedserverid` = -1 )" ;
 				$params = array( $jobId );
 				$result = DBInDesignServerJob::update($values, $where, $params);
 				if( DBInDesignServerJob::hasError() || $result === false ) {
@@ -546,7 +510,7 @@ class BizInDesignServerJobs
 					
 				if( ! self::isResponsive($serverURL)){
 					// remove server reservation for this job
-					$values =  array('assignedserverid' => null);
+					$values =  array('assignedserverid' => 0);
 					$where = '`id` = ?' ;
 					$params = array( $jobId );
 					$result = DBInDesignServerJob::update($values, $where, $params);
@@ -559,6 +523,8 @@ class BizInDesignServerJobs
 						$randomKey = array_rand($availableServers);
 						$idserversrow = $availableServers[$randomKey];
 						unset($availableServers[$randomKey]);
+					} else {
+						$idserversrow = false; //break the innner while and try to get another ids row. 
 					}
 				} else {
 					// YES, we found an available server
@@ -583,11 +549,23 @@ class BizInDesignServerJobs
 		
 		$date = date('Y-m-d\TH:i:s', time());
 		if (empty($assignedserver) ) {
+  			// Check first if there is at least one IDS configured with a high enough version.
+			$jobVersion = DBInDesignServerJob::getServerVersionOfJob(  $jobId ); 
+			if ( !is_null($jobVersion) && !self::compareInDesignSeverVersions( $jobVersion )) {
+				require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
+				$requiredVersion = BizInDesignServer::convertInternalVersionToExternal( $jobVersion );
+				LogHandler::Log('idserver', 'ERROR', "Serverjob ($jobId) requires $requiredVersion. No Indesign Server with version $requiredVersion or higher is available." );
+			}
+			// Check if there was an active IDS at all
+			if ( $initialAvailableIDS > 0 && count( $nonResponsiveServers) ===  $initialAvailableIDS ) {
+				LogHandler::Log('idserver', 'WARN', "None of the potential available InDesign Servers is responding. Check the InDesign Server configuration and run the WWTest page." );
+			}	
+			
 			$result = array( 'errorNumber' => -1, 'errorString' => BizResources::localize($errCode) );
 			if ( $foreground ) { 
 				$values =  array('readytime' => $date, 'errorcode' => $errCode, 'errormessage' => BizResources::localize($errCode));
 			} else { // reinsert background job
-				$values =  array('starttime' => null, 'assignedserverid' => null);
+				$values =  array('starttime' => '', 'assignedserverid' => 0);
 			}
 			$where = '`id` = ?' ;
 			$params = array( $jobId );
@@ -604,6 +582,25 @@ class BizInDesignServerJobs
 	}
 
 	/**
+	 * Checks if there is at least one Indesign Sever available with the correct
+	 * version (with a version at least as high as the passed one).
+	 * @param string $version Version to check against..
+	 * @return boolean Is available
+	 */
+	private static  function compareInDesignSeverVersions( $version ) 
+	{	
+		$indesignServers = DBInDesignServer::listInDesignServers();
+		require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
+		if ( $indesignServers ) foreach ( $indesignServers as $indesignServer ) {
+			if ( version_compare( $version, $indesignServer->ServerVersion, '<=' )) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
+	/**
 	 * Assigns given job to IDS and checks if IDS is responsive.
 	 *
 	 * @param integer $jobId    - job number
@@ -612,36 +609,40 @@ class BizInDesignServerJobs
 	 */
 	private static function assignServerToJob( $jobId, $idsObj )
 	{
-		$dbh = DBDriverFactory::gen();	
-		$indserverjobs = $dbh->tablename('indesignserverjobs');	
-
 		// assign job to ids
 		LogHandler::Log('idserver', 'DEBUG', "Checking InDesign Server [{$idsObj->Description}] at URL [{$idsObj->ServerURL}]" );
-		$sql = "update $indserverjobs set `assignedserverid` = ". $idsObj->Id.
-				" where `id` = $jobId and `assignedserverid` is null";
-		$sth2 = $dbh->query($sql); // make reservation for this server 
-		if( is_null($sth2) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-		}
+		
+		$values =  array('assignedserverid' => $idsObj->Id);
+		$where = "`id` = ? AND `assignedserverid` = 0" ;
+		$params = array( $jobId );
+		$result = DBInDesignServerJob::update($values, $where, $params);
+			
+		if( DBInDesignServerJob::hasError() || $result === false ) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+		}			
 
 		if( self::isResponsive($idsObj->ServerURL) ) {
 			// update execution times
 			$date = date('Y-m-d\TH:i:s', time());
-			$sql = "update $indserverjobs set `starttime` = '$date' where `id` = $jobId";
-			$sth = $dbh->query($sql);
-			if( is_null($sth) ) {
-				throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-			}
+			$values =  array('starttime' => $date);
+			$where = "`id` = ? " ;
+			$params = array( $jobId );
+			$result = DBInDesignServerJob::update($values, $where, $params);
+			if( DBInDesignServerJob::hasError() || $result === false ) {
+				throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+			}			
 			return null; // ok
 		} else {
 			// log error for this job at DB
 			$date = date('Y-m-d\TH:i:s', time());
 			$errMsg = BizResources::localize('IDS_NOT_RESPONDING');
-			$sql = "update $indserverjobs set `readytime` = ?, `errorcode` = ?, `errormessage` = ? where `id` = $jobId";
-			$sth = $dbh->query($sql, array($date, 'IDS_NOT_RESPONDING', $errMsg));
-			if( is_null($sth) ) {
-				throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-			}
+			$values =  array('readytime' => $date, 'errorcode' => 'IDS_NOT_RESPONDING', 'errormessage' => $errMsg);
+			$where = "`id` = ? " ;
+			$params = array( $jobId );
+			$result = DBInDesignServerJob::update($values, $where, $params);
+			if( DBInDesignServerJob::hasError() || $result === false ) {
+				throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+			}			
 			return array( 'errorNumber' => -1, 'errorString' => $errMsg );
 		}
 	}
@@ -671,16 +672,12 @@ class BizInDesignServerJobs
 		if( !is_null($result) ) {
 			return $result;
 		}
-
-		$dbh = DBDriverFactory::gen();	
-		$indserverjobs = $dbh->tablename('indesignserverjobs');	
-
-		$sql = "select * from $indserverjobs where id = $jobId";
-		$sth = $dbh->query($sql);
-		if( is_null($sth) ) {
-			throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-		}
-		$row = $dbh->fetch($sth);
+		$where = '`id` = ? ';
+		$params = array($jobId);
+		$row = DBInDesignServerJob::selectRow($where, '*', $params); // All fields
+		if( DBInDesignServerJob::hasError() || is_null($row) ) {
+			throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+		}		
 		$scriptText = $row['jobscript'];
 		$params = unserialize($row['jobparams']);	
 		
@@ -692,6 +689,8 @@ class BizInDesignServerJobs
 		}
 		
 		$timeout = 3600; // seconds
+		$defaultSocketTimeout = ini_get( 'default_socket_timeout' );
+		ini_set( 'default_socket_timeout', $timeout ); // BZ#24309
 		$options = array( 'location' => $serverURL, 'connection_timeout' => $timeout );
 		$soapclient = new WW_SOAP_IdsSoapClient( null, $options );
 		// also overrule PHP execution time-out
@@ -721,6 +720,7 @@ class BizInDesignServerJobs
 			LogHandler::Log('idserver', 'ERROR', 'Script failed: '.$e->getMessage() );
 			$soapFault = $e->getMessage();
 		}
+		ini_set( 'default_socket_timeout', $defaultSocketTimeout );
 
 		$requeue = false;
 		if ( !is_array($jobResult) ) {
@@ -730,36 +730,25 @@ class BizInDesignServerJobs
 			  , if indesign server crashes, remove possible lock done by script 
 			    also remove locks for child objects locked by same IP and same USR */
 			if ( $row['exclusivelock'] == 1 && isset($row['objid']) && $row['objid'] != '' ) {
-				$objectlocks = $dbh->tablename('objectlocks');
+				$where = '`object` = ? ';
 				$objid = $row['objid'];
-				
-				$sql = "select * from $objectlocks where object = $objid";
-				$sth = $dbh->query($sql);
-				if( is_null($sth) ) {
-					throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-				}
-				$lockinfo = $dbh->fetch($sth);
-				
+				$params = array($objid);
+				require_once BASEDIR.'/server/dbclasses/DBObjectLock.class.php';
+				$lockinfo = DBObjectLock::selectRow($where, '*', $params); // All fields
+				if( DBObjectLock::hasError() || is_null($lockinfo) ) {
+					throw new BizException( 'ERR_DATABASE', 'Server', DBObjectLock::getError() );
+				}	
 				if ( $lockinfo ) {
 					$ip = $lockinfo['ip'];
 					$usr = $lockinfo['usr'];
-					
 					LogHandler::Log('idserver', 'DEBUG', "Exclusive object still locked by [$usr] - ip [$ip], unlock object and child objects.");
-
-					$placements = $dbh->tablename('placements');
-					$sql = "delete from $objectlocks
-	 				 		where ip = '".$dbh->toDBString($ip)."'
-					 		and usr = '".$dbh->toDBString($usr)."'
-					 		and object in ( select `child` from $placements where `type` = 'Placed' and `parent` = $objid )";
-					$sth = $dbh->query($sql);
-					if( is_null($sth) ) {
-						throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
+					$sth = DBObjectLock::deleteLocksOfChildren($ip, $usr, $objid);	
+					if( DBObjectLock::hasError() || is_null($sth) ) {
+						throw new BizException( 'ERR_DATABASE', 'Server', DBObjectLock::getError() );
 					}
-					
-					$sql = "delete from $objectlocks where `object` = " . $objid;
-					$sth = $dbh->query($sql);	
-					if( is_null($sth) ) {
-						throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
+					$sth = DBObjectLock::unlockObject($objid, '');
+					if( DBObjectLock::hasError() || is_null($sth) ) {
+						throw new BizException( 'ERR_DATABASE', 'Server', DBObjectLock::getError() );
 					}
 				}
 			}
@@ -800,12 +789,13 @@ class BizInDesignServerJobs
 		if ( $requeue ) {
 			if ( $row['errormessage'] != 'REQUEUED' ) { // only requeue once...
 				LogHandler::Log('idserver', 'INFO', "Job failed due to IDS crash, REQUEUE this job once more..." );
-				$sql = "update $indserverjobs set `starttime` = null, `assignedserverid` = null, errormessage = 'REQUEUED' where `readytime` is null and `id` = ".$row['id'];
-			
-				$sth = $dbh->query($sql);
-				if( is_null($sth) ) {
-					throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-				}
+				$values =  array('starttime' => '', 'assignedserverid' => 0, 'errormessage' => 'REQUEUED');
+				$where = "`readytime` = '' AND `id` = ?";
+				$params = array($row['id']);
+				$result = DBInDesignServerJob::update($values, $where, $params);
+				if( DBInDesignServerJob::hasError() || $result === false ) {
+					throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+				}	
 			} else {
 				LogHandler::Log('idserver', 'INFO', 'Job failed due to IDS crash, but this job was already requeued last time' );
 				$errstr = "Job was requeued, but was still causing error on InDesign Server";
@@ -815,16 +805,17 @@ class BizInDesignServerJobs
 		
 		if ( ! $requeue ) {
 			if ( $errstr ) {
-				$sql = "update $indserverjobs set `readytime` = '$date', `scriptresult` = #BLOB#, `errorcode` = '$errcode', `errormessage` = '".$dbh->toDBString($errstr)."' where `id` = $jobId";		
+				$values =  array('readytime' => $date, 'scriptresult' => '#BLOB#', 'errorcode' => $errcode, 'errormessage' => $errstr );
 			} else {
-				$sql = "update $indserverjobs set `readytime` = '$date', `scriptresult` = #BLOB#, `errorcode` = null, `errormessage` = null where `id` = $jobId";	
+				$values =  array('readytime' => $date, 'scriptresult' => '#BLOB#', 'errorcode' => '', 'errormessage' => '' );
 			}
-			$sth = $dbh->query($sql, array(), $scriptresult);
-			if( is_null($sth) ) {
-				throw new BizException( 'ERR_DATABASE', 'Server', $dbh->error() );
-			}
+			$where = '`id` = ?' ;
+			$params = array($jobId);
+			$result = DBInDesignServerJob::update($values, $where, $params, $scriptresult);
+			if( DBInDesignServerJob::hasError() || $result === false ) {
+				throw new BizException( 'ERR_DATABASE', 'Server', DBInDesignServerJob::getError() );
+			}	
 		}
-
 		
 		LogHandler::Log('idserver', 'INFO', "END handling job [$jobId]" );
 		return $jobResult;
