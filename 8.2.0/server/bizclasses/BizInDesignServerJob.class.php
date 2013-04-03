@@ -6,9 +6,6 @@
  * @copyright   WoodWing Software bv. All Rights Reserved.
  */
 
-// ---------------------
-// this file is patched #001 to make the background processing of IDS jobs work (again)
-// --------------------
 
 // TODO: Move SQL to DB layer
 require_once BASEDIR.'/server/dbclasses/DBInDesignServerJob.class.php';
@@ -166,7 +163,7 @@ class BizInDesignServerJobs
 				}
 				if ( $requeue ) {
 					LogHandler::Log( 'idserver', 'INFO', "Requeue background job " );
-					$values = array('starttime' => null, 'assignedserverid' => null, 'errormessage' => 'REQUEUED'); 
+					$values = array('starttime' => '', 'assignedserverid' => 0, 'errormessage' => 'REQUEUED'); 
 					$update = true;
 				}
 				if ( $timeout ) {
@@ -180,7 +177,7 @@ class BizInDesignServerJobs
 				$update = true;
 			}
 			if ( $update ) {
-				$where = '`readytime` IS NULL AND `id` = ? ';
+				$where = "`readytime` = '' AND `id` = ? ";
 				$params = array( $row['id'] ); 
 				$result = DBInDesignServerJob::update($values, $where, $params);
 				if( DBInDesignServerJob::hasError() || $result === false ) {
@@ -191,7 +188,7 @@ class BizInDesignServerJobs
 		
 		// end all foreground jobs never started and queued longer then 3 mins...
 		$values = array('readytime' => $date, 'errorcode' => 'IDS_TIMEOUT', 'errormessage' => $timeOutDBStr); 
-		$where = '`foreground` = ? AND `assignedserverid` IS NULL AND `readytime` IS NULL AND `queuetime` <= ?';
+		$where = "`foreground` = ? AND `assignedserverid` = 0 AND `readytime` = '' AND `queuetime` <= ?";
 		$params = array(1, $checkdate); 
 		$result = DBInDesignServerJob::update($values, $where, $params);
 		if( DBInDesignServerJob::hasError() || $result === false ) {
@@ -230,7 +227,7 @@ class BizInDesignServerJobs
 	{
 
 		// reset
-		$values = array('assignedserverid' => null, 'starttime' => null, 'readytime' => null, 'errorcode' => null, 'errormessage' => null, 'scriptresult' => null); 
+		$values = array('assignedserverid' => 0, 'starttime' => '', 'readytime' => '', 'errorcode' => '', 'errormessage' => '', 'scriptresult' => ''); 
 		$where = '`id` = ?';
 		$params = array($jobid); 
 		$result = DBInDesignServerJob::update($values, $where, $params);
@@ -268,7 +265,7 @@ class BizInDesignServerJobs
 		// insert our new job
 		if (!$exclusiveLock) {$exclusiveLock = 0;}
 		if (!$foreground) {$foreground = 0;}
-		if (!$objId) {$objId = null;}
+		if (!$objId) {$objId = 0;} // Column cannot be null, has to be 0.
 		require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
 		$versionInfo = array();
 		DBVersion::splitMajorMinorVersion($serverVersion, $versionInfo);
@@ -298,25 +295,8 @@ class BizInDesignServerJobs
 	 * @param string $command - command to start
 	 * @param string $args    - parameters for command
 	 * 
-	 * @return string $result Return command error message when fail, empty message when success
+	 * @return process handle id ( or -1 when error starting process )
 	 */	
-		
-	// #001 start	
-	//public static function execInBackground($command, $args = "") 
-	//{
-    //	$result = '';
-	//	$output = array();
-	//	$return_value = null;
-	//	$cmd = $command . " " . escapeshellarg($args) . " 2>&1";
-	//	exec( $cmd, $output, $return_value );
-	//	if( $return_value ) {
-	//		$result = implode("\n",$output);
-	//		$result = "\nCommand: $cmd\nError: $result";
-	//	}
-    //
-	//	return $result;
-	//}
-	
 	public static function execInBackground($command, $args = "") 
 	{
 		$return_value = 0;
@@ -330,12 +310,13 @@ class BizInDesignServerJobs
 		} else {
 			$output= array();
 			exec($command . " " . escapeshellarg($args) . " > /dev/null &", $output, $return_value);    
+			// BZ#27655: Do not use >2&1 since that makes the exec() call synchronous! 
+			// Therefore, partially rolled back CL#55346 fix, which was made for BZ#22789.
 		}
 		return $return_value;
 	}
-	// #001 end
 	
-	/** 
+	/**
 	 * startBackgroundJobs - Starts background process to handle background jobs
 	 *  background jobs are handled by a seperate php page (InDesignServerBackGroundJobs.php)
 	 * 	  this php page is loaded in a new proces with help of CURL
@@ -350,8 +331,6 @@ class BizInDesignServerJobs
 	
 	public static function startBackgroundJobs( $checkResponsiveness = false )
 	{
-		require_once BASEDIR.'/server/dbclasses/DBInDesignServer.class.php';
-		
 		$backgroundjobs = DBInDesignServerJob::getAvailableBGJobs();
 		if( is_null($backgroundjobs) ) {
 			throw new BizException( 'ERR_DATABASE', 'Server', '');
@@ -364,6 +343,7 @@ class BizInDesignServerJobs
 			$tries = 1;
 			$maxtries = 60; // BZ#22789
 
+			require_once BASEDIR.'/server/dbclasses/DBInDesignServer.class.php';
 			while( $availableServers == 0 && $tries <= $maxtries ) {
 				// check if active server is really responsive!
 				if ( $checkResponsiveness ) {
@@ -404,17 +384,8 @@ class BizInDesignServerJobs
 					require_once BASEDIR.'/server/utils/InDesignServer.class.php';
 					$curl = InDesignServer::getCurlPath();
 					LogHandler::Log('idserver', 'INFO', "START background job with CURL [$curl]" );
-					
-					// #001 start - block below putin comment to fix backgroud running
-					//$result = self::execInBackground($curl,$url);
-					//if( !empty($result) ) {
-					//	LogHandler::Log('idserver', 'ERROR', "Error running job: " . $result );
-					//} else {
-					//	LogHandler::Log('idserver', 'INFO', "END background job with CURL [$curl]" );
-					//}  - end of block
 					self::execInBackground($curl,$url);
 					LogHandler::Log('idserver', 'INFO', "END background job with CURL [$curl]" );
-					// #001 End
 				}
 			} else {
 				LogHandler::Log('idserver', 'INFO', "No active - responsive InDesign servers found." );
@@ -432,6 +403,7 @@ class BizInDesignServerJobs
 	
 	public static function runBackgroundJob( $dbh, $handler_id ) 
 	{
+		$dbh = $dbh; // To make analyzer happy.
 		$morejobsavailable = 1;
 		$lastProcessedJob = 0;
 		
@@ -487,19 +459,22 @@ class BizInDesignServerJobs
 	{
 		require_once BASEDIR.'/server/dbclasses/DBInDesignServer.class.php';	
 
-		$tries = 1;
+		$tries = 0;
 		$maxtries = 60; // BZ#21109
 		$assignedserver = null;
 		$nonResponsiveServers = array();
 		$errCode = 'IDS_NOTAVAILABLE';
 
 		// get available InDesign Server ( with no job assigned currently )
-		while ( empty($assignedserver) && $tries <= $maxtries ) {
+		while ( empty($assignedserver) && $tries < $maxtries ) {
 			LogHandler::Log('idserver', 'DEBUG', "Find random available InDesign Server, try[$tries/$maxtries]" );
 			$tries++;
 			// 1 query to get all available servers...
 			$idserversrow = false;
 			$availableServers = DBInDesignServer::getAvailableServersForJob($jobId, $nonResponsiveServers);
+			if ( $tries === 1 ) {
+				$initialAvailableIDS = count( $availableServers );
+			}	
 			if ( is_null( $availableServers)) {
 				throw new BizException( 'ERR_DATABASE', 'Server', '' ); //@todo proper error message
 			}		
@@ -508,12 +483,11 @@ class BizInDesignServerJobs
 				$idserversrow = $availableServers[$randomKey];
 				unset($availableServers[$randomKey]);
 			}
-			while ( $idserversrow && empty($assignedserver) )
-			{
+			while ( $idserversrow && empty($assignedserver) ) {
 				$serverURL = self::createURL($idserversrow['hostname']).':'.$idserversrow['portnumber'];
 				LogHandler::Log('idserver', 'DEBUG', "Checking InDesign Server [" . $idserversrow['description'] . "] at URL [$serverURL]" );
 				$values =  array('assignedserverid' => $idserversrow['idsid']);
-				$where = "`id` = ? AND ( `assignedserverid` IS NULL OR `assignedserverid` = -1 )" ;
+				$where = "`id` = ? AND ( `assignedserverid` = 0 OR `assignedserverid` = -1 )" ;
 				$params = array( $jobId );
 				$result = DBInDesignServerJob::update($values, $where, $params);
 				if( DBInDesignServerJob::hasError() || $result === false ) {
@@ -536,7 +510,7 @@ class BizInDesignServerJobs
 					
 				if( ! self::isResponsive($serverURL)){
 					// remove server reservation for this job
-					$values =  array('assignedserverid' => null);
+					$values =  array('assignedserverid' => 0);
 					$where = '`id` = ?' ;
 					$params = array( $jobId );
 					$result = DBInDesignServerJob::update($values, $where, $params);
@@ -549,6 +523,8 @@ class BizInDesignServerJobs
 						$randomKey = array_rand($availableServers);
 						$idserversrow = $availableServers[$randomKey];
 						unset($availableServers[$randomKey]);
+					} else {
+						$idserversrow = false; //break the innner while and try to get another ids row. 
 					}
 				} else {
 					// YES, we found an available server
@@ -573,11 +549,23 @@ class BizInDesignServerJobs
 		
 		$date = date('Y-m-d\TH:i:s', time());
 		if (empty($assignedserver) ) {
+  			// Check first if there is at least one IDS configured with a high enough version.
+			$jobVersion = DBInDesignServerJob::getServerVersionOfJob(  $jobId ); 
+			if ( !is_null($jobVersion) && !self::compareInDesignSeverVersions( $jobVersion )) {
+				require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
+				$requiredVersion = BizInDesignServer::convertInternalVersionToExternal( $jobVersion );
+				LogHandler::Log('idserver', 'ERROR', "Serverjob ($jobId) requires $requiredVersion. No Indesign Server with version $requiredVersion or higher is available." );
+			}
+			// Check if there was an active IDS at all
+			if ( $initialAvailableIDS > 0 && count( $nonResponsiveServers) ===  $initialAvailableIDS ) {
+				LogHandler::Log('idserver', 'WARN', "None of the potential available InDesign Servers is responding. Check the InDesign Server configuration and run the WWTest page." );
+			}	
+			
 			$result = array( 'errorNumber' => -1, 'errorString' => BizResources::localize($errCode) );
 			if ( $foreground ) { 
 				$values =  array('readytime' => $date, 'errorcode' => $errCode, 'errormessage' => BizResources::localize($errCode));
 			} else { // reinsert background job
-				$values =  array('starttime' => null, 'assignedserverid' => null);
+				$values =  array('starttime' => '', 'assignedserverid' => 0);
 			}
 			$where = '`id` = ?' ;
 			$params = array( $jobId );
@@ -594,6 +582,25 @@ class BizInDesignServerJobs
 	}
 
 	/**
+	 * Checks if there is at least one Indesign Sever available with the correct
+	 * version (with a version at least as high as the passed one).
+	 * @param string $version Version to check against..
+	 * @return boolean Is available
+	 */
+	private static  function compareInDesignSeverVersions( $version ) 
+	{	
+		$indesignServers = DBInDesignServer::listInDesignServers();
+		require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
+		if ( $indesignServers ) foreach ( $indesignServers as $indesignServer ) {
+			if ( version_compare( $version, $indesignServer->ServerVersion, '<=' )) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
+	/**
 	 * Assigns given job to IDS and checks if IDS is responsive.
 	 *
 	 * @param integer $jobId    - job number
@@ -606,7 +613,7 @@ class BizInDesignServerJobs
 		LogHandler::Log('idserver', 'DEBUG', "Checking InDesign Server [{$idsObj->Description}] at URL [{$idsObj->ServerURL}]" );
 		
 		$values =  array('assignedserverid' => $idsObj->Id);
-		$where = "`id` = ? AND `assignedserverid` IS NULL" ;
+		$where = "`id` = ? AND `assignedserverid` = 0" ;
 		$params = array( $jobId );
 		$result = DBInDesignServerJob::update($values, $where, $params);
 			
@@ -782,8 +789,8 @@ class BizInDesignServerJobs
 		if ( $requeue ) {
 			if ( $row['errormessage'] != 'REQUEUED' ) { // only requeue once...
 				LogHandler::Log('idserver', 'INFO', "Job failed due to IDS crash, REQUEUE this job once more..." );
-				$values =  array('starttime' => null, 'assignedserverid' => null, 'errormessage' => 'REQUEUED');
-				$where = "`readytime` IS NULL AND `id` = ?";
+				$values =  array('starttime' => '', 'assignedserverid' => 0, 'errormessage' => 'REQUEUED');
+				$where = "`readytime` = '' AND `id` = ?";
 				$params = array($row['id']);
 				$result = DBInDesignServerJob::update($values, $where, $params);
 				if( DBInDesignServerJob::hasError() || $result === false ) {
@@ -800,7 +807,7 @@ class BizInDesignServerJobs
 			if ( $errstr ) {
 				$values =  array('readytime' => $date, 'scriptresult' => '#BLOB#', 'errorcode' => $errcode, 'errormessage' => $errstr );
 			} else {
-				$values =  array('readytime' => $date, 'scriptresult' => '#BLOB#', 'errorcode' => null, 'errormessage' => null );
+				$values =  array('readytime' => $date, 'scriptresult' => '#BLOB#', 'errorcode' => '', 'errormessage' => '' );
 			}
 			$where = '`id` = ?' ;
 			$params = array($jobId);
