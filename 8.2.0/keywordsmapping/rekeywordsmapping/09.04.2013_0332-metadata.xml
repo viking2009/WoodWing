@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26844</ID><DocumentID/><Name>09.04.2013_0332</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Запасы товаров на оптовых складах в США в феврале неожиданно упали на 0,3%</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>США-ТОВАРЫ-СКЛАДЫ-ЗАПАСЫ
+
+ 
+  
+Запасы товаров на оптовых складах в США в феврале неожиданно упали на 0,3%
+  
+Вашингтон. 9 апреля. ИНТЕРФАКС-АФИ - Запасы товаров на оптовых складах в США снизились в феврале на 0,3% относительно предыдущего месяца, говорится в сообщении министерства торговли страны.
+  
+Аналитики, опрошенные агентством Bloomberg, прогнозировали рост запасов в феврале на 0,5% относительно января.
+  
+Согласно пересмотренным данным, в январе показатель вырос на 0,8%, а не на 1,2%, как сообщалось ранее.
+  
+Между тем продажи со складов увеличились в феврале на 1,7% после спада на 0,8% в январе. Эксперты ожидали повышения показателя на 1,3%.
+  
+При текущих темпах продаж запасов товаров на оптовых складах хватило бы, чтобы обеспечить спрос в течение 1,19 месяца, что выше февральского уровня в 1,18 месяца.
+  
+Оптовые запасы товаров длительного пользования (срок эксплуатации более 3 лет) выросли на 0,2%. Запасы товаров недлительного пользования сократились на 0,9%.
+  
+На долю оптовых запасов приходится порядка 30% от общего объема.
+  
+17:23:31 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:24:10</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:24:10</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:d58775223b35bc99a05b92b9788b48b8"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>61C9A99C-731B-44DE-8279-949C15A03A90</ID><Name>body</Name><LengthWords>163</LengthWords><LengthChars>1078</LengthChars><LengthParas>1</LengthParas><LengthLines>12</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>F2DC4040-904E-4B41-BB79-BA13F2183283</ID><Name>head</Name><LengthWords>13</LengthWords><LengthChars>74</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Запасы товаров на оптовых складах в США в феврале неожиданно упали на 0,3%</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

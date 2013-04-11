@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26838</ID><DocumentID/><Name>09.04.2013_0326</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>'Мако Холдинг' назначил гендиректором Опаица вместо Ермольчука</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  'Мако Холдинг' назначил гендиректором Опаица вместо Ермольчука  
+ Українські Новини    09.04.2013 17:16    Сергей Шевчук  Экономика - Строительство, Регионы; Регионы - Восток, Экономика 
+
+  
+Акционер компании 'Мако Холдинг' (Донецк) 8 апреля освободил от обязанностей генерального директора Сергея Ермольчука и назначил вместо него Адриана Опаица.
+
+Об этом говорится в сообщении компании.
+
+Ермольчук занимал данную должность с февраля 2011 года и был уволен по собственному желанию.
+
+Опаиц ранее являлся директором юридического департамента компании, гендиректором он назначен до 8 апреля 2016 года.
+
+Как сообщало агентство, 100% акций компании владеет старший сын Президента Виктора Януковича Александр.
+
+Компания 'Мако-Холдинг' (ранее носила название 'Менеджмент ассетс компани') занимается строительными проектами.
+
+В ноябре 2011 года 'Мако-Холдинг' увеличила уставный фонд на 225 млн гривен, или в 5 раз до 280 млн гривен.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:18:39</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:18:39</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:50473714572b4eb222cd8a929f4e98d7"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>0FF09CA2-6129-45A0-A771-D3B5A1B3E406</ID><Name>body</Name><LengthWords>157</LengthWords><LengthChars>1114</LengthChars><LengthParas>1</LengthParas><LengthLines>13</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>1AF3D0F7-1B2B-483F-A226-DA5FD6770367</ID><Name>head</Name><LengthWords>7</LengthWords><LengthChars>62</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>"Мако Холдинг" назначил гендиректором Опаица вместо Ермольчука</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

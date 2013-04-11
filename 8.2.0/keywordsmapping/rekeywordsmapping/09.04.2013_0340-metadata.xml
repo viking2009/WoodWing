@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26852</ID><DocumentID/><Name>09.04.2013_0340</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Бросившая в депутата Колесниченко пакеты с грязью девушка привлечена к административной ответственности</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-МИЛИЦИЯ-ДЕПУТАТ-ИНЦИДЕНТ
+
+ 
+  
+Бросившая в депутата Колесниченко пакеты с грязью девушка привлечена к административной ответственности
+  
+ 
+  
+            Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА - Девушку, бросившую во время пресс-конференции несколько пакетов с грязью в народного депутата Украины (фракция Партии регионов) Вадима Колесниченко, привлекут к административной ответственности.
+  
+            Как сообщили агентству 'Интерфакс-Украина' в пресс-службе главного управления МВД Украины в Киеве, к ней будут применены санкции за мелкое хулиганство.
+  
+            Согласно решению суда, активисте Коалиции участников помаранчевой революции (КУПР) грозит штраф или административный арест на срок до 15 суток.
+  
+            Как сообщалось, в народного депутата от Партии регионов В.Колесниченко бросили фекалиями на пресс-конференции во вторник в Киеве, посвященной проблеме использования языков при создании биометрических паспортов.
+  
+            Во время пресс-конференции, в зал зашла молодая девушка, которая бросила в народного депутата два пакета, содержащих экскременты. При этом она выкрикнула фразу: 'Бандиты перешли уже все границы!'.
+  
+            В.Колесниченко уклонился от брошенных в него пакетов; один из них разорвался на стене за его спиной. Народный депутат назвал девушку 'больной'. Бросив пакеты, девушка выбежала из зала, ее задержала охрана. После сотрудники СМИ вызвали милицию, чтобы зафиксировать факт порчи имущества.
+  
+            Девушка сообщила журналистам, что ее зовут Елизаветой, и она является активисткой Коалиции участников помаранчевой революции (КУПР).
+  
+ 
+  
+            рл
+  
+            
+  
+17:41:07 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:45:21</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:45:21</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:4efcd36ab6311ea1800a6c05258cac13"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>F38B7FDD-BA4B-4DF0-A9D7-ECE669985986</ID><Name>body</Name><LengthWords>223</LengthWords><LengthChars>1671</LengthChars><LengthParas>1</LengthParas><LengthLines>16</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>FF2CD9B9-0BCB-4B94-AB08-C5800599195D</ID><Name>head</Name><LengthWords>12</LengthWords><LengthChars>103</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Бросившая в депутата Колесниченко пакеты с грязью девушка привлечена к административной ответственности</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26819</ID><DocumentID/><Name>09.04.2013_0317</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>ДОПОЛНЕНО Минфин напоминает держателям казначейских обязательств серии А о начале выплаты дохода по ним с 11 апреля</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  ДОПОЛНЕНО Минфин напоминает держателям казначейских обязательств серии А о начале выплаты дохода по ним с 11 апреля  
+ Українські Новини    09.04.2013 16:58    Виктор Рясной  Экономика - Финансы, Власть; Финансы - Финансовые рынки, Банки, Власть 
+
+  
+(Новость дополнена подробностями)
+
+Министерство финансов напоминает гражданам - держателям государственных казначейских обязательств серии А о начале выплаты дохода по таким бумагам с 11 апреля.
+
+Об этом говорится в сообщении Минфина.
+
+'С 11 апреля 2013 года начинается выплата дохода за первый купон казначейских обязательств серии А', - отмечается в сообщении.
+
+Размер дохода является фиксированным и составляет 23 доллара на одну бумагу.
+
+Доход будет выплачиваться через отделения Ощадбанка.
+
+После осуществления выплаты, соответствующий купон отрезается от казначейского обязательства служащим Ощадбанка.
+
+Минфин предупреждает, что самостоятельно отрезанные держателями казначейских обязательств купоны не будут приниматься к оплате.
+
+Казначейские обязательства серии А были размещены в октябре-ноябре 2012 года на общую сумму 100 млн гривен.
+
+Срок обращения бумаг - 2 года, номинал - 500 долларов, доходность - 9,2% годовых, при этом выплата дохода осуществляется каждые полгода.
+
+В настоящее время, по данным Минфина, продолжается размещение казначейских обязательств серии Б на 100 млн долларов.
+
+Срок обращения бумаг серии Б - 2 года, номинал - 500 долларов, доходность - 8% годовых, выплата дохода осуществляется каждые полгода.
+
+Размер дохода по каждому купону бумаг серии Б является фиксированным и составляет 20 долларов.
+
+Минфин не приводит информации о том, на какую сумму уже размещены бумаги серии Б.
+
+Как сообщало агентство, по состоянию на начало марта 2013 казначейские обязательства серии Б были размещены на сумму лишь 6 млн долларов из 100 млн
+
+Размещение бумаг осуществляется через 500 отделений Ощадбанка по Украине.
+
+Минфин начал продавать казначейские обязательства серии В с 30 ноября 2012.
+
+10 октября 2012 Минфин начал продавать через Ощадбанк казначейские обязательства серии А на 100 млн долларов, а 29 ноября 2012 завершил размещение данных бумаг.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:02:41</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:02:41</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:66b41d01fc7721fe364cb28dd955d434"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>3A9460A3-400F-4039-9E3B-EF1093FB27E2</ID><Name>head</Name><LengthWords>17</LengthWords><LengthChars>115</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>ДОПОЛНЕНО Минфин напоминает держателям казначейских обязательств серии А о начале выплаты дохода по ним с 11 апреля</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>B828257F-BA2F-4376-94C2-2E43060C12F2</ID><Name>body</Name><LengthWords>320</LengthWords><LengthChars>2318</LengthChars><LengthParas>1</LengthParas><LengthLines>22</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

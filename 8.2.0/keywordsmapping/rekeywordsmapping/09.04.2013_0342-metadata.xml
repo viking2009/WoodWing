@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26854</ID><DocumentID/><Name>09.04.2013_0342</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>ХАРП создал лабораторию для испытания железнодорожных подшипников</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  ХАРП создал лабораторию для испытания железнодорожных подшипников  
+ Українські Новини    09.04.2013 17:41    Сергей Бобок  Экономика - Машиностроение, Регионы; Регионы - Восток, Экономика 
+
+  
+Харьковский подшипниковый завод (ХАРП), контролируемый 'Украинской промышленной энергетической компанией' (УПЭК, Харьков), создал лабораторию для проведения сертификационных испытаний железнодорожных подшипников.
+
+Об этом говорится в сообщении УПЭК.
+
+'Аттестат аккредитации в расширенной области согласно требованиям НБ ЖТ ЦТ-ЦВ-ЦЛ 014-2003 'Подшипники качения буксовые для подвижного состава железных дорог. Нормы безопасности' будет выдан 'Росаккредитацией' (Российская Федерация), экспертная группа которой работала на ХАРП 25-28 марта', - сказано в сообщении.
+
+Станция оснащена 3 испытательными стендами разработки УПЭК, оборудованными электромеханическими узлами нагрузки и оснащенными системами управления и регистрации параметров производства компании Beckhoff (Германия), а также системами смазки и охлаждения производства Hydroma (Чехия).
+
+Стенды предназначены для определения гамма-процентной наработки буксовых подшипников до отказа, согласно сертификационным методикам СТ ССФЖТ (системы сертификации на федеральном железнодорожном транспорте) ЦТ ЦЛ ЦВ-137-2002 'Подвижной состав магистральных железных дорог. Буксовые подшипники качения. Типовая методика испытаний' и европейским нормам безопасности EN 12082:2007, в скоростных диапазонах до 250 км/ч для всего подвижного состава, эксплуатирующегося на железных дорогах СНГ и Европейского Союза.
+
+'Еще 2 стенда, оборудованных гидравлическими узлами нагрузки и системой управления фирмы Blumenbecker (Германия), будут использоваться для проведения исследовательских работ по повышению надежности и увеличению ресурса подшипников, а также для проведения сертификационных испытаний по тем же методикам', - сказано в сообщении.
+
+Заместитель гендиректора ИГ УПЭК по исследованиям и разработкам Эдуард Симсон отметил, что испытательная станция создавалась как для нужд ХАРП, так и для проведения квалификационных испытаний по заказу других производителей железнодорожных подшипников.
+
+В системе управления и регистрации параметров имеется возможность online доступа через Интернет для контроля и получения информации в течение всего процесса испытаний.
+
+'Учитывая, что подобные стенды имеются только у самых крупных компаний мирового уровня, мы ожидаем большой интерес к проведению квалификационных испытаний на условиях аутсорсинга со стороны других производителей', - отметил Симсон.
+
+Проведение обязательных квалификационных испытаний новой подшипниковой продукции ИГ УПЭК на станции сократит время на проверку их надежности в сравнении с натурными испытаниями в 3-5 раз, снизит расходы на квалификационные испытания и даст возможность быстрее выводить на рынок новые продукты.
+
+Кроме того, оно позволит повысить эксплуатационную надежность разрабатываемых подшипников и снизить расходы железных дорог на их ремонт и техническое обслуживание.
+
+Как сообщало агентство, ранее УПЭК заявил о намерении создать лабораторию для испытания железнодорожных подшипников до конца 2012 года.
+
+Харьковский подшипниковый завод является публичным акционерным обществом и одной из крупнейших фирм на рынке Украины и СНГ по производству шариковых и роликовых подшипников.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:45:27</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:45:27</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:9e4635222b2d38f810df118df2c5c1e6"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>2A8A9CC6-D437-4733-9AC4-390BFA35CAE1</ID><Name>body</Name><LengthWords>428</LengthWords><LengthChars>3495</LengthChars><LengthParas>1</LengthParas><LengthLines>22</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>44FC6DDC-600A-448C-9ABA-CD08F2989E51</ID><Name>head</Name><LengthWords>7</LengthWords><LengthChars>65</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>ХАРП создал лабораторию для испытания железнодорожных подшипников</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

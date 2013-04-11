@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26843</ID><DocumentID/><Name>09.04.2013_0331</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Таиландское телевидение перепутало Тэтчер с актрисой Мерил Стрип</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>ТАИЛАНД-ТВ-ТЭТЧЕР-КУРЬЕЗ
+
+ 
+  
+Таиландское телевидение перепутало Тэтчер с актрисой Мерил Стрип
+  
+ 
+  
+Бангкок. 9 апреля. ИНТЕРФАКС - Один из таиландских телеканалов, сообщавший о смерти экс-премьера Великобритании Маргарет Тэтчер, показал в эфире фотографии американской актрисы Мерил Стрип, передают во вторник местные СМИ.
+  
+Как сообщается, редактор информационной программы, искавший фотографии М.Тэтчер по интернету, по ошибке выбрал изображения М.Стрип, которая сыграла главную роль в биографической драме 2011 года 'Железная леди'.
+  
+Руководство канала принесло официальные извинения после того, как с ним связался один из зрителей, возмущенный ошибкой.
+  
+М.Тэтчер скончалась в понедельник в возрасте 87 лет.
+  
+'Железная леди' возглавляла британское правительство с 1979 по 1990 год. Она была первой женщиной, ставшей премьер-министром европейского государства.
+  
+В последние годы М.Тэтчер страдала от серьезных проблем со здоровьем.
+  
+17:22:25 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:24:07</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:24:07</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:7ce7d4cabf1b1a1b9909847454c66367"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>07CD27CA-3ED3-403E-9EAA-288C72751BD7</ID><Name>body</Name><LengthWords>135</LengthWords><LengthChars>972</LengthChars><LengthParas>1</LengthParas><LengthLines>14</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>11FAF97E-A143-4E37-A1E8-1922A3BF7E5D</ID><Name>head</Name><LengthWords>8</LengthWords><LengthChars>64</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Таиландское телевидение перепутало Тэтчер с актрисой Мерил Стрип</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

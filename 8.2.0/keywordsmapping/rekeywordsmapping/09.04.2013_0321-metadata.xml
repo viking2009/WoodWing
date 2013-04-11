@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26828</ID><DocumentID/><Name>09.04.2013_0321</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Государство должно признавать дипломы богословских учебных заведений, чтобы их выпускники могли преподавать в светских вузах – депутат</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-БОГОСЛОВЫ-ДИПЛОМЫ
+
+ 
+  
+Государство должно признавать дипломы богословских учебных заведений, чтобы их выпускники могли преподавать в светских вузах – депутат
+  
+ 
+  
+            Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА - Государство должно признавать дипломы богословских вузов, чтобы их выпускники могли преподавать и заниматься наукой в светских учебных заведениях, считает глава парламентского комитета по вопросам образования и науки Лилия Гриневич (фракция 'Батькивщина').
+  
+            'Признание государством дипломов семинарий и духовных академий необходимо для того, чтобы выпускники богословских вузов могли преподавать, заниматься наукой в светских вузах – то есть иметь те же права, что и их светские коллеги', - цитирует пресс-служба Л.Гриневич во вторник.
+  
+            Как отметила народный депутат, при определенных условиях государство сможет признавать образование, полученное в семинариях и духовных академиях вузах.
+  
+            По словам Л.Гриневич, богословское высшее образование должно соответствовать государственным требованиям в вопросах: длительности учебного процесса, уровня преподавательского состава, стандартов содержания образования (последние подлежат разработке).
+  
+            'Во время подготовки законопроекта о высшем образовании №1187-1 (авторства Арсения Яценюка, Виталия Кличко, Олега Тягнибока, Лилии Гриневич и других) были проведены консультации с представителями церквей Украины. 
+  
+            В результате в законопроекте содержатся нормы, которые приближают богословское образование к государственному признанию', - сказала глава комитета на встрече с секретариатом Всеукраинского совета церквей и религиозных организаций.
+  
+ 
+  
+Ек-дзв
+  
+17:11:33 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:13:12</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:13:12</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:81a618ac1f374c5f6c8c98501f6bfa4e"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>B904344A-B620-4918-9944-5696326B1D49</ID><Name>head</Name><LengthWords>17</LengthWords><LengthChars>134</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Государство должно признавать дипломы богословских учебных заведений, чтобы их выпускники могли преподавать в светских вузах – депута</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>F22D7952-0477-4396-A376-3A8638387E3F</ID><Name>body</Name><LengthWords>219</LengthWords><LengthChars>1721</LengthChars><LengthParas>1</LengthParas><LengthLines>11</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

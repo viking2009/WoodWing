@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26849</ID><DocumentID/><Name>09.04.2013_0337</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Милиционер, виновный в смертельном ДТП в Киеве, приговорен к 7 годам заключения</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-КИЕВ-ДТП
+
+ 
+  
+Милиционер, виновный в смертельном ДТП в Киеве, приговорен к 7 годам заключения
+  
+ 
+  
+      Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА – Печерский районный суд Киева приговорил к 7 годам лишения свободы бывшего милиционера, сбившего насмерть женщину на пешеходном переходе в центре столицы.
+  
+      Как сообщает пресс-служба Печерского района прокуратуры Киева во вторник, 9 сентября 2011 работник линейного отдела милиции железнодорожной станции 'Киев-Пассажирский', двигаясь по бульвару Леси Украинский на служебном автомобиле 'Шкода', наехал на женщину, которая переходила дорогу.
+  
+      От полученных травм пострадавшая скончалась. Сиротой остался ее малолетний сын.
+  
+      В ходе досудебного следствия эксперты давали противоречивые выводы относительно определения места наезда на потерпевшую. Однако при воспроизведении обстоятельств событий с участием свидетелей ДТП суд установил, что женщина на момент аварии находилась на пешеходном переходе.
+  
+      Приговором суда бывший милиционер признан виновным по ч.2 ст. 286 УК Украины - нарушение правил безопасности дорожного движения и назначено наказание в виде 7 лет лишения свободы с лишением права управлять транспортными средствами на срок 3 года.
+  
+      Кроме того, суд удовлетворил гражданский иск потерпевшей стороны на сумму 450 тыс. грн.
+  
+      Во время судебного заседания мера пресечения виновнику ДТП была изменена с подписки о невыезде на содержание под стражей.
+  
+ 
+  
+кт
+  
+17:36:17 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:39:59</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:39:59</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:d474e06dc8436f5001dd07add7ea3d5b"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>2338D834-2000-4491-A64D-BA4BA2FD0B9D</ID><Name>body</Name><LengthWords>217</LengthWords><LengthChars>1494</LengthChars><LengthParas>1</LengthParas><LengthLines>15</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>BDE1758D-2E32-45AC-BC70-065E102F142A</ID><Name>head</Name><LengthWords>12</LengthWords><LengthChars>79</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Милиционер, виновный в смертельном ДТП в Киеве, приговорен к 7 годам заключения</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

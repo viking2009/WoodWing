@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26850</ID><DocumentID/><Name>09.04.2013_0338</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Акционеры харьковского треста 'Житлобуд-1' отменили его реорганизацию в ОДО с ПАО</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-ТРЕСТ-ЖИТЛОБУД-ХАРЬКОВ-РЕОРГАНИЗАЦИЯ
+
+ 
+  
+Акционеры харьковского треста 'Житлобуд-1' отменили его реорганизацию в ОДО с ПАО
+  
+Киев. 9 апреля. ИНЕТРФАКС-УКРАИНА – Акционеры ПАО 'Трест Житлобуд-1' (Харьков), одного из крупных застройщиков в городе, отменили решение о реорганизации предприятия в общество с дополнительной ответственностью (ОДО).
+  
+Согласно сообщению предприятия в системе раскрытия информации Нацкомиссии по ценным бумагам и фондовому рынку (НКЦБФР), соответствующее решение утвердили акционеры ПАО на внеочередном собрании 5 апреля.
+  
+Также акционеры в связи с принятым решением прекратили полномочия ликвидационной комиссии во главе с Александром Харченко (на 5 апреля владел 92,4476% акций ПАО), созданной ранее для ликвидации ПАО путем преобразования в ОДО.
+  
+Как сообщалось, решение о реорганизации предприятия было поддержано на внеочередном собрании 25 января 92,847% голосов присутствующих на нем акционеров, против - 7,14%.
+  
+Трест 'Житлобуд-1' создан в 1964 году на базе 'Харьковского треста Министерства высшего образования' (Харьков), основанного в 1947 году.
+  
+В 2005 году в рамках реорганизации к 'Житлобуд-1' было присоединено ЗАО 'Опорядбуд' (Ривне): трест выполняет строительно-монтажные работы, 'Опорядбуд' – реконструкцию и восстановление зданий.
+  
+'Житлобуд-1' реализует, в частности, проекты строительства объектов жилой недвижимости на просп. Победы, 66-д в Дзержинском районе Харькова. Степень готовности жилых домов №№2, 3 и 4, согласно данным треста в НКЦБФР, к концу третьего квартала 2012 года составляла 100%.
+  
+Трест в целом за время своей деятельности, по его данным, построил 118 общеобразовательных школ, 204 детсада, 30 учреждений охраны здоровья, 181 объект торговли, 131 объект общественного питания и др.
+  
+Согласно сообщению предприятия в системе раскрытия информации НКЦБФР к очередному собранию акционеров 30 апреля, его чистый убыток по итогам 2012 года составил 1,65 млн грн против 0,83 млн грн чистой прибыли в 2011 году, активы выросли на 16,2% -- до 449,9 млн грн.
+  
+Чистая прибыль треста по итогам 2011 года сократилась в 8,5 раза по сравнению с 2010 годом – до 0,83 млн грн, чистый доход снизился на 21,5%, до 211,5 млн грн.
+  
+Основным акционером ПАО, согласно данным НКЦБФР, на апрель 2012 года являлся Александр Харченко (92,4476%).
+  
+Уставный капитал ПАО 'Трест 'Житлобуд-1' к концу 2012 года составлял 5,384 млн грн.
+  
+ 
+  
+17:36:53 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:40:03</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:40:03</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:2c506397df42c929e2b13ba98de83d67"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>5EFEBBEF-5B3A-42E2-B328-9C214C05157A</ID><Name>body</Name><LengthWords>351</LengthWords><LengthChars>2433</LengthChars><LengthParas>1</LengthParas><LengthLines>17</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>9099C81B-A518-4D52-A9E3-9A888301AACF</ID><Name>head</Name><LengthWords>11</LengthWords><LengthChars>81</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Акционеры харьковского треста "Житлобуд-1" отменили его реорганизацию в ОДО с ПАО</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

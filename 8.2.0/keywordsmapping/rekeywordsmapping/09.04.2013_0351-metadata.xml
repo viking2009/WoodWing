@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26863</ID><DocumentID/><Name>09.04.2013_0351</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Глава миссии МВФ отмечает ослабление девальвационного давления на курс гривни</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-МВФ-ПРЕМЬЕР-2
+
+ 
+  
+Глава миссии МВФ отмечает ослабление девальвационного давления на курс гривни
+  
+(добавлены 4-5,7-8 абз.)
+  
+Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА – Последние несколько месяцев были достаточно благоприятными для Украины, в результате чего девальвационное давление на курс гривни ослабло.
+  
+'Несколько ослабло напряжение относительно обменного курса. И нам приятно отметить, что за последние несколько месяцев в Украине экономическая ситуация не ухудшилась', - цитируется глава миссии Международного валютного фонда Кристофер Джарвис на веб-сайте правительства.
+  
+Согласно сообщению, глава миссии МВФ сделал такую оценку в ходе встречи с премьер-министров Украины Николаем Азаровым.
+  
+Премьер-министр в ходе встречи отметил формирование в январе положительного сальдо внешнеторгового баланса, впервые за последние несколько лет.
+  
+'В экономике ситуация управляема. Мы рассчитываем выйти на рост ВВП, который запланирован в госбюджете. Доходы бюджета в первом квартале по факту превысили те, которые мы предполагали. У нас зафиксировано сокращение импорта, некоторое увеличение экспорта. В результате впервые у нас зафиксировано положительное сальдо внешнеторгового баланса. Оно пока совсем небольшое, но это также оптимистичный показатель', - сказал Н.Азаров.
+  
+По словам К.Джарвиса, миссия провела плодотворные переговоры, как с чиновниками правительства, так и с представителями Национального банка Украины.
+  
+Н.Азаров отметил, что он в целом оптимистично смотрит на продолжение сотрудничества с МВФ и является его последовательным сторонником. При этом он напомнил, что даже в кризисное время Украина вовремя рассчитывается по всем внешним обязательствам. 'С 2011 года мы не получили ни цента помощи от МВФ. За это время многие страны получили многомиллиардные займы от МВФ и еще не решили свои проблемы', - подчеркнул премьер.
+  
+Как сообщалось, Украина впервые за последние четыре года завершила январь с позитивным внешнеторговым сальдо, которое составило $15,8 млн.
+  
+Глава миссии МВФ также представил главе правительства нового постоянного представителя МВФ в Украине Жерома Ваше: он с 1 мая сменит на этом посту Макса Альера, который занимал эту должность в течение последних четырех лет.
+  
+Как сообщалось, 27 марта в Киев прибыла миссия МВФ для переговоров с украинскими властями о новом соглашении stand-by. Работа миссии МВФ запланирована с 27 марта по 10 апреля.
+  
+ 
+  
+17:55:25 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:56:16</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:56:16</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:3c7f103a0d58f19531f25739a6638ffb"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>2D7E5690-C39D-4869-AD0C-974D028657AF</ID><Name>head</Name><LengthWords>10</LengthWords><LengthChars>77</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Глава миссии МВФ отмечает ослабление девальвационного давления на курс гривни</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>9C6BD03A-4F95-45D6-8485-292D15006EFA</ID><Name>body</Name><LengthWords>344</LengthWords><LengthChars>2437</LengthChars><LengthParas>1</LengthParas><LengthLines>27</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

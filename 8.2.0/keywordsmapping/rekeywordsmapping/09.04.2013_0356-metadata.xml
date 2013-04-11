@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26878</ID><DocumentID/><Name>09.04.2013_0356</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>'Укртелеком' понизил ставку на 5-8 купоны облигаций серий 'N'-'Q' до 18% годовых</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРТЕЛЕКОМ-ОБЛИГАЦИИ-СТАВКА
+
+ 
+  
+'Укртелеком' понизил ставку на 5-8 купоны облигаций серий 'N'-'Q' до 18% годовых
+  
+Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА - ПАО 'Укртелеком' понизило процентную ставку на пятый-восьмой купонные периоды облигаций серий 'N'-'Q' до 18% с 19,5% годовых, сообщил эмитент в системе раскрытия информации Нацкомиссии по ценным бумагам и фондовому рынку.
+  
+Как сообщалось, наблюдательный совет общества 23 марта 2012 года принял решение о размещении облигаций серий 'N'-'Q' на 600 млн грн.
+  
+Ценные бумаги номиналом 50 тыс. грн выпущены в бездокументарной форме в количестве: серии 'N' и 'О' – по 2 тыс. шт., серии 'P' и 'Q' – по 4 тыс. шт. Их размещение проходит на фондовой площадке 'Украинская биржа' (Киев) и будет длиться до 27 мая 2013 года.
+  
+Выплата процентов по облигациям ежеквартальная.
+  
+Срок обращения ценных бумаг: серии 'N' – до 19 февраля 2017 года, серии 'O' – до 21 мая 2017 года, серии 'P' – до 20 августа 2017 года и серии 'Q' – до 19 ноября 2017 года. Вместе с тем условиями выпуска по всем сериям предусмотрена ежегодная оферта.
+  
+Привлеченные средства оператор намерен направить на строительство и модернизацию сетевой инфраструктуры, в частности, на расширение сегмента широкополосного доступа к интернету, модернизацию оптической магистральной сети DWDM.
+  
+'Укртелеком' является крупнейшим оператором фиксированной связи в Украине и продвигает мобильную связь в стандарте 3G, обладая единственной подобной лицензией в стране.
+  
+Компания с первого квартала 2012 года перешла на отчетность по международным стандартам и по итогам года получила 366,802 млн грн чистой прибыли. Ее чистый доход при этом составил 6,948 млрд грн.
+  
+92,79% акций 'Укртелекома' владеет ООО 'ЕСУ', украинская 'дочка' австрийской EPIC.
+  
+В настоящее время в обращении находятся еще четыре серии облигаций эмитента общей номинальной стоимостью 200 млн грн.
+  
+ 
+  
+18:07:07 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T18:12:03</Modified><Creator>woodwing</Creator><Created>2013-04-09T18:12:03</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:e5ee927dee4b9a097b1d1d87863c6af2"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>0BF64138-F0E4-43AE-923E-913F0F34E2C3</ID><Name>body</Name><LengthWords>295</LengthWords><LengthChars>1914</LengthChars><LengthParas>1</LengthParas><LengthLines>20</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>6AEF0AD1-5C14-4728-80FC-1361DBB03513</ID><Name>head</Name><LengthWords>12</LengthWords><LengthChars>80</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>"Укртелеком" понизил ставку на 5-8 купоны облигаций серий "N"-"Q" до 18% годовых</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

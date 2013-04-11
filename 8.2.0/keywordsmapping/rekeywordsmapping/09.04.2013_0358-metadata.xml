@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26880</ID><DocumentID/><Name>09.04.2013_0358</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>'Даноша' планирует построить 2 свинокомплекса на 16 тыс. голов в Ивано-Франковской области до 2015</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  'Даноша' планирует построить 2 свинокомплекса на 16 тыс. голов в Ивано-Франковской области до 2015  
+ Українські Новини    09.04.2013 18:07    Оксана Пирожок  Экономика - АПК, Регионы; Регионы - Запад, Экономика 
+
+  
+Сельскохозяйственное предприятие 'Даноша' (Калушский район, Ивано-Франковская область) планирует построить 2 свинокомплекса на 16 тыс. голов в Ивано-Франковской области до 2015 года.
+
+Об этом Українським Новинам сообщил представитель компании.
+
+'В ближайших планах - строительство 2 комплексов в Ивано-Франковской области: свиноматочного на 4000 голов и откормочного на 11 900 голов', - сказал он.
+
+По его словам, строительство может быть завершено и в более ранние сроки.
+
+Представитель компании уточнил, что сейчас компания продолжает строительство завода по производству биогаза, а задержка с введением его в эксплуатацию связана с проблемами поставки оборудования.
+
+Как сообщало агентство, Международная финансовая корпорация намерена стать совладельцем сельскохозяйственного предприятия 'Даноша'.
+
+В 2012 году 'Даноша' привлекла у NEFCO кредитную линию на 1,8 млн евро для строительства биогазовой установки в Ивано-Франковской области.
+
+'Даноша' намерена построить в Ивано-Франковской области в целом 4 завода по производству биогаза: в селах Копанки, Лука, Станькова, Тустань.
+
+'Даноша' намерена построить мясоперерабатывающий завод в Калушском районе Ивано-Франковской области до конца 2014.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T18:12:10</Modified><Creator>woodwing</Creator><Created>2013-04-09T18:12:10</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:1bbab1973d3ea61996fee262f7acc32f"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>11F4F515-2561-44DD-BD24-4F2EC7B3A9D8</ID><Name>head</Name><LengthWords>14</LengthWords><LengthChars>98</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>"Даноша" планирует построить 2 свинокомплекса на 16 тыс. голов в Ивано-Франковской области до 2015</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>12D35528-F2DB-4647-AD9C-E8B568C5CB00</ID><Name>body</Name><LengthWords>214</LengthWords><LengthChars>1604</LengthChars><LengthParas>1</LengthParas><LengthLines>17</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

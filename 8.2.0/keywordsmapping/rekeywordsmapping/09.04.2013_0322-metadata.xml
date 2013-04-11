@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26829</ID><DocumentID/><Name>09.04.2013_0322</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>'Фитофарм' уволил коммерческого директора Обидейко</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  'Фитофарм' уволил коммерческого директора Обидейко  
+ Українські Новини    09.04.2013 17:10    Сергей Шевчук  Экономика - Химическая промышленность, Регионы; Регионы - Восток, Экономика 
+
+  
+Наблюдательный совет производителя лекарственных препаратов публичного акционерного общества 'Фитофарм' (Артемовск, Донецкая область) 9 апреля освободил от обязанностей члена совета директоров - коммерческого директора компании Виталия Обидейко.
+
+Об этом говорится в сообщении компании.
+
+Обидейко входил в совет директоров компании с октября 2012 года, занимая должность коммерческого директора с июля 2012 года, и был уволен по собственному желанию.
+
+Акционером компании он не является.
+
+На должность Обидейко набсовет никого не назначил.
+
+Как сообщало агентство, 2012 год 'Фитофарм', согласно международным стандартам финансовой отчетности, по предварительным данным, закончил с чистой прибылью 3,226 млн гривен.
+
+'Фитофарм' поставляет свою продукцию на рынки Грузии, Беларуси, Таджикистана, Казахстана, Молдовы, Эстонии.
+
+81,23% акций 'Фитофарма' принадлежит 5 физлицам-резидентам.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:13:15</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:13:15</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:5b22924d0414a4461e448e0a4fe94ceb"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>44E55597-1006-41C9-97F4-688CBCAFD2F0</ID><Name>body</Name><LengthWords>163</LengthWords><LengthChars>1263</LengthChars><LengthParas>1</LengthParas><LengthLines>14</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>8C2A1715-AAA4-4C18-820A-05A6040C4052</ID><Name>head</Name><LengthWords>5</LengthWords><LengthChars>50</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>"Фитофарм" уволил коммерческого директора Обидейко</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26884</ID><DocumentID/><Name>09.04.2013_0362</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Депутаты от оппозиции требуют от генпрокурора проверить правомочность решения членов регламентного комитета, лишивших Власенко мандата</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-ПАРЛАМЕНТ-ГЕНПРОКУРАТУРА-ОБРАЩЕНИЕ
+
+ 
+  
+Депутаты от оппозиции требуют от генпрокурора проверить правомочность решения членов регламентного комитета, лишивших Власенко мандата
+  
+ 
+  
+            Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА – Группа парламентариев от оппозиции заявляет, что решение регламентного комитета Верховной Рады по лишению Сергея Власенко депутатского мандата было сфальсифицировано и просит разобраться с этим вопросом Генеральную прокуратуру.
+  
+            'В этом депутатском обращении (к генеральному прокурору - ИФ) мы требуем проведения проверки, мы требуем принять меры к привлечению к уголовной ответственности народных депутатов, членов комитетов Верховной Рады по вопросам регламента, а также соответствующих работников секретариата указанного комитета за фальсификацию решения регламентного комитета', - сказал народный депутат, член регламентного комитета Андрей Пышный (фракция 'Батькивщина') в ходе заседания комиссии во вторник.
+  
+            Как передает корреспондент агентства 'Интерфакс-Украина', на заседании комиссия рассматривала вопрос незаконного лишения депутатского мандата С.Власенко.
+  
+            По словам А.Пышного, в своем обращении оппозиционеры требуют провести проверку по сфальсифицированному решению регламентного комитета и внести соответствующие данные в единый реестр досудебного расследования, после чего начать расследование.
+  
+            Как сообщалось, С.Власенко 22 февраля 2013 года заявил, что подал заявление в Совет адвокатов Украины с просьбой отменить его адвокатское свидетельство. Он отметил, что в соответствии с действующим законодательством право на занятие адвокатской деятельностью прекращается со дня подачи заявления, однако это не лишает его права продолжать быть защитником экс-премьера Юлии Тимошенко.
+  
+            С.Власенко неоднократно подчеркивал, что является не адвокатом, а защитником Ю.Тимошенко.
+  
+            Регламентный комитет Верховной Рады принял решение о лишении депутатских полномочий С.Власенко (фракция 'Батькивщина') и члена фракции Партии регионов Андрея Веревского. С соответствующими исками в Высший административный суд Украины (ВАСУ) обратился председатель Верховной Рады Владимир Рыбак.
+  
+            Оппозиция, в свою очередь, обвинила председателя регламентного комитета Владимира Макеенко (Партия регионов) в фальсификации решения комитета о лишении С.Власенко депутатских полномочий.
+  
+            6 марта 2013 года ВАСУ лишил С.Власенко депутатского мандата, удовлетворив иск председателя Верховной Рады Владимира Рыбака. Иск спикера парламента аргументировался совмещением С.Власенко депутатских полномочий и адвокатской деятельности.
+  
+            12 марта С.Власенко подал заявление о пересмотре решения ВАСУ Верховным судом Украины, однако получил отказ.
+  
+            С.Власенко обратился в Европейский суд по правам человека. По его словам, ЕСПЧ рассмотрит жалобу 7 мая.
+  
+ 
+  
+ 
+  
+Ес-ид
+  
+18:10:34 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T18:12:22</Modified><Creator>woodwing</Creator><Created>2013-04-09T18:12:22</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:3b1d4cd0e671f951fca9ecc2eb61a917"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>7DBB2CBD-F331-4251-8826-3A0320533B4F</ID><Name>body</Name><LengthWords>369</LengthWords><LengthChars>2951</LengthChars><LengthParas>1</LengthParas><LengthLines>29</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>DEECAC31-76FF-43D8-927C-06C824144FCB</ID><Name>head</Name><LengthWords>15</LengthWords><LengthChars>134</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Депутаты от оппозиции требуют от генпрокурора проверить правомочность решения членов регламентного комитета, лишивших Власенко манда</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26836</ID><DocumentID/><Name>09.04.2013_0324</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Доход главы Полтавской облгосадминистрации Удовиченко в 2012г составил почти 175 тыс грн – декларация</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-ПОЛТАВСКАЯ-ЧИНОВНИК-ДЕКЛАРАЦИЯ
+
+ 
+  
+Доход главы Полтавской облгосадминистрации Удовиченко в 2012г составил почти 175 тыс грн – декларация
+  
+ 
+  
+            Кременчуг. 9 апреля. ИНТЕРФАКС-УКРАИНА – Глава Полтавской областной государственной администрации Александр Удовиченко в 2012 году заработал 174,876 тыс грн, на банковских счетах имеет 1.2 млн грн.
+  
+            Согласно информации о доходах за 2012 год, которую предоставил журналистам во вторник А.Удовиченко, его заработная плата за 2012 год составила 174,876 грн. 
+  
+            В собственности А.Удовиченко находятся земельный участок площадью 636 кв.м., садовый (дачный) дом площадью 24 кв.м, две квартиры площадью 115 кв.м. и 111 квм, гараж площадью 36 кв.м.
+  
+            Общая сумма средств на банковских счетах – 1,2 млн грн, вложенных в прошлом году – 400 тыс грн.
+  
+            На содержание перечисленного имущества в прошлом году направлено 28 тыс грн.
+  
+ 
+  
+Вм-ид
+  
+17:16:56 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:18:32</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:18:32</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:999b749bcbf225dc07041560c4860c91"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>4D709081-C73A-46A3-A2DC-08348047A99D</ID><Name>body</Name><LengthWords>148</LengthWords><LengthChars>977</LengthChars><LengthParas>1</LengthParas><LengthLines>17</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>6CB582E0-762A-43F2-9E8B-8C1830210A4B</ID><Name>head</Name><LengthWords>14</LengthWords><LengthChars>101</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Доход главы Полтавской облгосадминистрации Удовиченко в 2012г составил почти 175 тыс грн – декларация</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

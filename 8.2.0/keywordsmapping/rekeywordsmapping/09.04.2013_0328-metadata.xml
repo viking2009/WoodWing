@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26840</ID><DocumentID/><Name>09.04.2013_0328</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Минэкономики рассчитывает на сотрудничество с мировыми производителями в сельхозмашиностроении</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  Минэкономики рассчитывает на сотрудничество с мировыми производителями в сельхозмашиностроении  
+ Українські Новини    09.04.2013 17:19    Оксана Пирожок  Экономика - Машиностроение, АПК, Власть 
+
+  
+Министерство экономического развития и торговли рассчитывает на сотрудничество с мировыми производителями в отрасли сельскохозяйственного машиностроения.
+
+Об этом на брифинге сообщил директор департамента стратегического планирования развития экономики Евгений Олейников.
+
+'Минэкономразвития и Минагрополитики ведут сейчас переговоры с рядом известных производителей сельхозтехники, чтобы они начинали в Украине или строить, или модернизировать уже существующие предприятия по производству данной техники', - сказал он.
+
+По его словам, сначала это позволит обеспечить потребность внутреннего рынка, а потом - обеспечит экспорт сельхозтехники из Украины.
+
+Олейников отметил, что для привлечения для мировых производителей необходимо создать благоприятные условия.
+
+Он уточнил, что министерство уже ведет соответствующие переговоры, но пока они не будут закончены, отказался их комментировать.
+
+Как сообщало агентство, Министерство аграрной политики и продовольствия допускает возможность ограничения импорта бывшей в употреблении техники.
+
+Кабинет Министров намерен усилить поддержку развития отечественного сельскохозяйственного машиностроения.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:23:58</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:23:58</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:fbbb3b369bb45d78f81901ddc8aef007"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>C15152DC-7C03-4553-B7FE-8CE0AD513E97</ID><Name>body</Name><LengthWords>186</LengthWords><LengthChars>1532</LengthChars><LengthParas>1</LengthParas><LengthLines>14</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>D889BAD9-03BF-481D-A476-F6EFD69804DA</ID><Name>head</Name><LengthWords>9</LengthWords><LengthChars>94</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Минэкономики рассчитывает на сотрудничество с мировыми производителями в сельхозмашиностроении</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26862</ID><DocumentID/><Name>09.04.2013_0350</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Глава Минобороны обсудит перспективы сотрудничества с главами оборонных ведомств Бразилии и Аргентины</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-МИНОБОРОНЫ-ВИЗИТ
+
+ 
+  
+Глава Минобороны обсудит перспективы сотрудничества с главами оборонных ведомств Бразилии и Аргентины
+  
+ 
+  
+            Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА – Глава Министерства обороны Украины Павел Лебедев посетит Бразилию и Аргентину, где обсудит с главами оборонных ведомств перспективы двустороннего сотрудничества в военной и военно-технической сферах.
+  
+            Как сообщает пресс-служба Минобороны во вторник, 9 апреля министр намерен посетить международную выставку авиационной, аэрокосмической и оборонной промышленности LAAD-2013 в Рио-де-Жанейро, на которой представлены украинские образцы вооружения и военной техники. Кроме того, П.Лебедев встретится с министром обороны Бразилии Сельсом Аморимом.
+  
+            10-11 апреля в Буэнос-Айресе глава Минонобороны Украины намерен встретиться с аргентинским коллегой Артуро Антонио Пурицелли.
+  
+ 
+  
+дзв
+  
+ 
+  
+17:53:54 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:56:13</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:56:13</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:f9f63429965e9801c1ef021b048de4e6"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>376A565D-F1DF-4C21-98F4-9E428A96A55D</ID><Name>head</Name><LengthWords>12</LengthWords><LengthChars>101</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Глава Минобороны обсудит перспективы сотрудничества с главами оборонных ведомств Бразилии и Аргентины</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>6E2EDD34-B531-45FE-B948-D23002641E0A</ID><Name>body</Name><LengthWords>124</LengthWords><LengthChars>930</LengthChars><LengthParas>1</LengthParas><LengthLines>8</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

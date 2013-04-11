@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26856</ID><DocumentID/><Name>09.04.2013_0344</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Українські</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>ПФТС снизился на 3,94 пункта до 297,01</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>  
+  ПФТС снизился на 3,94 пункта до 297,01  
+ Українські Новини    09.04.2013 17:41    Екатерина Цапро  Экономика - Финансы; Финансы - Фондовый Рынок 
+
+  
+Индекс цен на акции на торгах фондовой биржи ПФТС во вторник снизился на 3,94 пункта, или на 1,31% до 297,01 пункта.
+
+Об этом сообщила пресс-служба ПФТС.
+
+С начала 2013 года ПФТС-индекс снизился на 31,68 пункта, или 9,64% с 328,69 пункта.
+
+Как сообщало агентство, индекс цен на акции на торгах фондовой биржи ПФТС в понедельник повысился на 1,70 пункта, или на 0,57% до 300,95 пункта.
+
+Индекс ПФТС рассчитывается с 1 октября 1997 года.
+
+По состоянию на 1 апреля количество ценных бумаг в биржевом списке составило 1 373: акции - 729, корпоративные облигации - 318, ценные бумаги институтов совместного инвестирования - 142, ОВГЗ - 167, муниципальные облигации - 17.
+
+  
+
+  (c)1997-2012 Українські Новини. Все права защищены. Публикация и распространение содержания продукции Українських новин без письменного согласия агентства запрещены.    
+
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:45:33</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:45:33</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:227cb4ee0b19f0aab4ea3a94476347fd"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>01FBDD02-DFB4-4320-989A-4CD990D67F13</ID><Name>head</Name><LengthWords>7</LengthWords><LengthChars>38</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>ПФТС снизился на 3,94 пункта до 297,01</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>272F204F-C72E-4D5A-A520-5247FE98E7C1</ID><Name>body</Name><LengthWords>165</LengthWords><LengthChars>1004</LengthChars><LengthParas>1</LengthParas><LengthLines>12</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

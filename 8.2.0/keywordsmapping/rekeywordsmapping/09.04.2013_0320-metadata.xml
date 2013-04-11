@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26827</ID><DocumentID/><Name>09.04.2013_0320</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Кличко, Тягнибок и Яценюк возглавили акцию 'Вставай, Украина!' в Луцке</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-ЛУЦК-ОППОЗИЦИЯ-АКЦИЯ
+
+ 
+  
+Кличко, Тягнибок и Яценюк возглавили акцию 'Вставай, Украина!' в Луцке
+  
+ 
+  
+            Луцк. 9 апреля. ИНТЕРФАКС-УКРАИНА – На Киевской площади Луцка началась оппозиционная акция 'Вставай, Украина!', в которой принимают участие представители политических партий 'Батькивщина', 'УДАР', 'Свобода' и 'Фронт змин'.
+  
+            Как передает корреспондент агентства 'Интерфакс-Украина', в акции принимает участие несколько тысяч человек. Колонна с участниками акции растянулась от Киевской площади до проспекту Воли. В мероприятии принимают много молодых людей. Участники держат государственные флаги, а также флаги с партийной символикой. Они скандируют лозунги, среди которых 'Ничто не остановит идею, время которой пришло' и 'За справедливую зарплату!'.
+  
+            В акции принимают участие председатель фракции 'Батькивщина' Арсений Яценюк, лидер фракции 'УДАР' Виталий Кличко и лидер фракции 'Свобода' Олег Тягнибок.
+  
+            В настоящее время участники акции собрались на Театральной площади, где состоится митинг.
+  
+            Вместе с тем, по оценке отдела по связям с общественностью УМВД Украины в Волынской области в акции принимают участие до 1 тыс человек. Для охраны общественного порядка привлечены около сотни работников милиции.
+  
+ 
+  
+Пч-ид
+  
+17:09:08 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:13:08</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:13:08</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:253a19e298d14a0f8c507ae1175d8cc6"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>3AC74668-6563-4FDF-8AA6-6D123180BA6E</ID><Name>head</Name><LengthWords>10</LengthWords><LengthChars>70</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Кличко, Тягнибок и Яценюк возглавили акцию "Вставай, Украина!" в Луцке</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>A4F2E6C3-D2CE-4E30-956E-2FFDB2F81BC4</ID><Name>body</Name><LengthWords>185</LengthWords><LengthChars>1332</LengthChars><LengthParas>1</LengthParas><LengthLines>13</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

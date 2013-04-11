@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26847</ID><DocumentID/><Name>09.04.2013_0335</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Донецкий 'Евроинвестстрой' заменит электрооборудование на блоке №2 Трипольской ТЭС 'Центрэнерго' за 25 млн грн</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-ЦЕНТРЭНЕРГО-ТЭС-МОДЕРНИЗАЦИЯ
+
+ 
+  
+Донецкий 'Евроинвестстрой' заменит электрооборудование на блоке №2 Трипольской ТЭС 'Центрэнерго' за 25 млн грн
+  
+Киев. 8 апреля. ИНТЕРФАКС-УКРАИНА – Энергогенерирующая компания ПАО 'Центрэнерго' (Киев) отобрала ООО 'Евроинвестстрой' (Донецк) для выполнения работ по замене электрооборудования второго энергоблока Трипольской ТЭС.
+  
+Согласно обнародованному на веб-портале 'Государственные закупки' объявлению генкомпании, договор стоимостью 25,5 млн грн (с НДС) акцептирован 3 апреля 2013 года.
+  
+Общий срок выполнения работ по замене электроборудования блока в период реконструкции не должен превышать девять месяцев с даты выдачи заказчиком исполнителя первого наряда на такие работы.
+  
+В документе отмечается, что электрооборудования второго блока Трипольской ТЭС поддерживается в работоспособном состоянии благодаря своевременным ремонтам и усиленному техническому обслуживанию, поскольку подавляющее большинство его элементов эксплуатируется уже более 40 лет, физически и морально устарев.
+  
+Как сообщалось, 'Центрэнерго' отключило от электросети второй энергоблок  Трипольской ТЭС с 1 января 2013 года, приступив к его реконструкции и техническому переоснащению. Запуск блока после модернизации намечен на август 2014 года.
+  
+Кабинет министров Украины распоряжением №1589-р от 23 декабря 2009 года утвердил ТЭО реконструкции блока №2 Трипольской ТЭС общей стоимостью 1 млрд 138,9 млн грн.
+  
+В июне 2011 года и октябре 2012-го 'Центрэнерго' подписало договор с Ощадбанком на открытие кредитных линий общим объемом 1,139 млрд грн для финансирование технического переоснащения второго энергоблока Трипольской ТЭС. Стоимость обслуживания кредитов - 560 млн грн (без НДС).
+  
+В результате реконструкции срок службы блока будет продлен на 20 лет, или на 100 тыс. часов. Его установленная электрическая мощность возрастет с 300 до 325 МВт, диапазон маневренности - на 25 МВт, увеличится КПД. Кроме того, будут уменьшены выбросы вредных выбросов в атмосферу: угольной золы – до 50 мг/куб. м, серного ангидрида и оксидов азота – до 400 мг/куб. м.
+  
+Будет также обеспечено сжигание антрацита без подсветки природным газом или мазутом в диапазоне нагрузки 80-100% от номинальной и минимальная подсветка при нагрузках меньше 80% от номинальных.
+  
+Проект технического переоснащения, в частности, предусматривает замену турбины и генератора на современное оборудование производства 'Турбоатома' и 'Электротяжмаша', а также реконструкцию котла в существующей ячейке блока по проекту ЦКБ 'Энергопрогресс' (все - Харьков) и замену электрофильтров, установку сероочистки.
+  
+В начале апреля 2013 года харьковский 'Турбоатом' сообщил, что завершил изготовление оборудования для второго блока Трипольской ТЭС в рамках контракта с ПАО 'Центрэнерго', заключенного в июле 2011 года. 
+  
+В марте завод отгрузил последние узлы - системы регулирования и блока парораспределения на сумму более 32 млн грн. В настоящее время на станции начался демонтаж существующего оборудования, затем 'Турбоатом' выполнит шеф-монтаж и примет участие в пуско-наладочных работах. В рамках контракта общей стоимостью 180 млн грн завод изготовил узлы модернизации для замены турбоагрегата К-300-240 на турбину нового поколения К-325-23,5.
+  
+ТЭС ПАО 'Центрэнерго' в январе-марте 2013 года снизили выработку электроэнергии на 17,% (на 863,2 млн кВт-ч) по сравнению с аналогичным периодом 2012 года – до 4 млрд 176,7 млн кВт-ч.
+  
+'Центрэнерго' эксплуатирует Углегорскую, Змиевскую и Трипольскую ТЭС суммарной установленной мощностью 7550 МВт. Государству в лице НАК 'Энергетическая компания Украины' принадлежит 78,3% акций 'Центрэнерго'.
+  
+Трипольская ТЭС (Украинка Киевской области) установленной электрической мощностью 1800 МВт обеспечивает электроэнергией центральный регион стран.
+  
+Фонд госимущества Украины планировал в 2013 году выставить на продажу 53,289% акций 'Центрэнерго', однако начавший 29 марта пожар на Углегорской ТЭС разрушил четыре блока станции, подкорректировав планы правительства.
+  
+ 
+  
+17:32:30 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:34:42</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:34:42</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:52282a3ced5623194018322aab515b05"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>55854CA3-608A-46BB-B0E6-7A8C4B45C75F</ID><Name>body</Name><LengthWords>547</LengthWords><LengthChars>4050</LengthChars><LengthParas>1</LengthParas><LengthLines>29</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>FF2BBAA4-DA44-4126-A90D-DF7FAF647CE7</ID><Name>head</Name><LengthWords>14</LengthWords><LengthChars>110</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Донецкий "Евроинвестстрой" заменит электрооборудование на блоке №2 Трипольской ТЭС "Центрэнерго" за 25 млн грн</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

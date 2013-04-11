@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26826</ID><DocumentID/><Name>09.04.2013_0319</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>Курс гривни на межбанке во вторник укрепился до 8,1385 грн/$1</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-МЕЖБАНК-КУРС
+
+ 
+  
+Курс гривни на межбанке во вторник укрепился до 8,1385 грн/$1
+  
+Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА – Курс гривни на межбанковском валютном рынке во вторник укрепился до 8,1385 грн/$1 с 8,1405 грн/$1 в предыдущий рабочий день.
+  
+Как сообщили агентству 'Интерфакс-Украина' дилеры коммерческих банков, котировки на межбанке в финальной части торгов составили 8,1370-8,1400 грн/$1.
+  
+Национальный банк Украины в этот день на рынок не выходил.
+  
+Курс гривни на межбанке с начала 2013 года снизился на 1,4% - с 8,0250 грн/$1.
+  
+В Украине на шесть месяцев (с 19 ноября 2012 года) введена обязательная продажа 50% валютной выручки.
+  
+В Нацбанке ранее заявляли, что считают приемлемой годовую амплитуду колебаний курса гривни в пределах 2,5%. При этом правительство Украины прогнозирует, что в 2013 году среднегодовой курс гривни составит 8,4 грн/$1.
+  
+ 
+  
+17:08:38 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:13:05</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:13:05</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:b741ba8b9bb1df15350698f776a2c4fc"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>1DC7B8F8-5240-449B-8DC9-48F2F0D65238</ID><Name>head</Name><LengthWords>10</LengthWords><LengthChars>61</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>Курс гривни на межбанке во вторник укрепился до 8,1385 грн/$1</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>39C92468-9FAD-4DBF-830F-181DCB8C5C6D</ID><Name>body</Name><LengthWords>142</LengthWords><LengthChars>904</LengthChars><LengthParas>1</LengthParas><LengthLines>10</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

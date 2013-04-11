@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26861</ID><DocumentID/><Name>09.04.2013_0349</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>'КУБ-Газ' получил приток 0,12 млн куб. м газа в день на 'Макеевской-16'</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-KOV-ГАЗ
+
+ 
+  
+'КУБ-Газ' получил приток 0,12 млн куб. м газа в день на 'Макеевской-16'
+  
+Киев. 9 апреля. ИНТЕРФАКС-УКРАИНА – ООО 'КУБ-Газ' (Луганск) получило приток газа в объеме более 4,3 млн куб. футов в сутки (MMcf/d, 121,8 тыс. куб. м) из зоны S5 на самой глубокой из своих скважин 'Макеевская-16' (М-16) глубиной 4,3 км.
+  
+'Впервые компания зафиксировала приток газа на коммерческом уровне с серпуховского яруса, открывая нам новые возможности для будущего роста', - говорится в сообщении мажоритарного собственника 'КУБ-Газ' - Kulczyk Oil Ventures Limited (KOV, Кипр) на сайте Варшавской фондовой биржи во вторник.
+  
+Компания указывает, что начало коммерческой добычи на скважине ожидается позднее во втором квартале этого года.
+  
+В документе также отмечается, что в марте началось тестирование М-16 на наличие газа в других перспективных отложениях башкирского и московского ярусов.
+  
+Как сообщалось, 'Куб-Газ' завершил бурение М-16 в конце прошлого года, выявив в ходе бурения семь потенциально газоносных зон. До этого компания не бурила скважины глубже 3,2 км.
+  
+'КУБ-Газ' разрабатывает Ольговское, Макеевское, Северо-Макеевское, Вергунское и Крутогоривское месторождения в Днепровско-Донецком бассейне.
+  
+Компании Kulczyk Oil принадлежит 70% акций 'КУБ-Газа', канадской Cub Energy Inc. – 30%. 'По состоянию на конец 2012 года 'КУБ-Газ' добывали 18 MMcf/d и планирует выйти на уровень добычи 27 MMcf/d в 2014 году и 40 MMcf/d – в 2015 году.
+  
+ 
+  
+17:53:13 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T17:56:09</Modified><Creator>woodwing</Creator><Created>2013-04-09T17:56:09</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:bdc286bee74ff1db2c1114f4b4aaf97a"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>0000EDCD-E01B-48E8-9E12-17AA1362A52B</ID><Name>head</Name><LengthWords>12</LengthWords><LengthChars>71</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>"КУБ-Газ" получил приток 0,12 млн куб. м газа в день на "Макеевской-16"</Snippet><Version/><Content xsi:nil="true"/></Element><Element><ID>152D0230-D7E4-41E2-AFAF-106D37082027</ID><Name>body</Name><LengthWords>227</LengthWords><LengthChars>1495</LengthChars><LengthParas>1</LengthParas><LengthLines>17</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>

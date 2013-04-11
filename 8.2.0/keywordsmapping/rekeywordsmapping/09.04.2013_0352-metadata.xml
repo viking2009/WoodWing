@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:SmartConnection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SOAP-ENV:Body><ns1:GetObjectsResponse><Objects><Object><MetaData><BasicMetaData><ID>26868</ID><DocumentID/><Name>09.04.2013_0352</Name><Type>Article</Type><Publication><Id>7</Id><Name>Новости</Name></Publication><Category><Id>64</Id><Name>News</Name></Category><ContentSource/></BasicMetaData><TargetMetaData><Publication><Id>7</Id><Name>Новости</Name></Publication><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Section><Id>64</Id><Name>News</Name></Section><Editions/></TargetMetaData><RightsMetaData><CopyrightMarked>false</CopyrightMarked><Copyright/><CopyrightURL/></RightsMetaData><SourceMetaData><Credit/><Source/><Author>Interfax-Ukraine</Author></SourceMetaData><ContentMetaData><Description/><DescriptionAuthor/><Keywords><String/></Keywords><Slugline>'Ивано-Франковскцемент' намерен построить 1-й в Украине завод по производству спеццементов мощностью 1 млн тонн в год</Slugline><Format>text/wwea</Format><Columns>0</Columns><Width>0</Width><Height>0</Height><Dpi>0</Dpi><LengthWords>0</LengthWords><LengthChars>0</LengthChars><LengthParas>0</LengthParas><LengthLines>0</LengthLines><PlainContent>УКРАИНА-ЦЕМЕНТ-ЗАВОД-ПЛАНЫ
+
+ 
+  
+'Ивано-Франковскцемент' намерен построить 1-й в Украине завод по производству спеццементов мощностью 1 млн тонн в год
+  
+Ивано-Франковск. 9 апреля. ИНТЕРФАКС-УКРАИНА – Крупный производитель цемента в Украине ПАО 'Ивано-Франковскцемент' (Ямница Ивано-Франковской обл.) намерен построить первый в Украине завод по производству специальных цементов, мощность которого составит 1 млн тонн цемента в год.
+  
+'Завод, который будет запущен в работу после подписания сегодняшнего контракта, будет сконцентрирован на выпуске спеццементов, в первую очередь дорожных цементов, сульфатостойких цементов, нескольких видов тампонажных цементов, которые используются при добыче нефти и газа и, возможно, в будущем также сланцевого газа', - сказал председатель наблюдательного совета 'Ивано-Франковскцемента' Николай Круць после презентации проекта 'Внедрение энергосберегающих и природоохранных технологий на технологической линии №2 цементного производства ПАО 'Ивано-Франковскцемент' и подписания соответствующего контракта о его реализации с фирмой FL Smidth (Дания) во вторник.
+  
+Он пояснил, что тампонажный, дорожный и сульфатостойкий цементы могут быть качественными только при изготовлении их исключительно по 'сухой' технологии, которую планируют внедрить на новом заводе.
+  
+Н.Круць уточнил, что завод планируют ввести в эксплуатацию через 15-16 месяцев, а само строительство завершить на протяжении 14 месяцев.
+  
+По его словам, для реализации проекта привлекли кредитные средства Всемирного банка, Европейского банка реконструкции и развития, датского Danshe Bank и Укрэксимбанка на срок от семи до девяти лет. 'Мы привлекли большое количество банков, потому что одному банку не под силу потянуть такой большой проект', - пояснил Н.Круць. При этом он не уточнил стоимость проекта, отметив, что 'сумму будут уточнять после завершения всех работ'. 
+  
+'Строительство буде значительно дешевле, чем если бы строился новый завод на новом месте', - сказал Н.Круць и уточнил, что новый проект предусматривает использование уже имеющихся производственных площадей и оборудования технологической линии №1 и ранее построенной инфраструктуры.
+  
+'Подготовительные работы уже начались. Мы получили разрешение общины села Ямница буквально недавно. Идут уточнения всех наших контролирующих, природоохранных органов, Госархстройконтроля. Дальше - все степени разрешений с точки зрения государства и после этого мы приступаем к строительству самой технологической линии, а в сущности это будет завод номер два', - подчеркнул он.
+  
+По словам Н.Круця, окупаемость проекта – пять лет.
+  
+Как сообщалось, ПАО 'Ивано-Франковскцемент' по итогам 2012 года увеличило чистую прибыль в 15,6 раза по сравнению с 2011 годом – до 88,6 млн грн.
+  
+Согласно сообщению предприятия в прессе о проведении очередного собрания акционеров 25 апреля, его активы в прошлом году выросли на 43,5% и составили 1,33 млрд грн.
+  
+'Ивано-Франковскцемент' создан в 1999 году путем преобразования Ивано-Фвранковского цементно-шиферного комбината, основанного на базе цементного завода в 1964 году.
+  
+Предприятие занимается производством цемента, волокнистоцементных и асбестоцементных изделий, гипса и гипсового медицинского бинта. Экспортирует продукцию в Румынию, Молдову и Белоруссию.
+  
+Основными акционерами ПАО, согласно данным НКЦБФР, на третий квартал 2012 года являлись Permixo Limited (36,9758%), Basmaren Enterprises Limited (20,7574%) и Prenters Engineering Limited (13,3031%).
+  
+К концу 2011 года акционерами ПАО являлись Николай Круць (51,3352%), ООО 'Ивано-Франковскцемент-этернит' (20,7615%, Ямница Ивано-Франковской обл.) и глава правления предприятия Богдан Заяц (13,3031%).
+  
+Уставный капитал ПАО 'Ивано-Франковскцемент' к концу 2012 года составлял 133,132 млн грн.
+  
+Дочерние предприятия (ДП) 'Ивано-Франковскцемента': ДП 'Спецжелезобетон', филиалы: 'Неруднык' (с.Пасечная Ивано-Франковской обл.) и 'Терминал' (Ужгород Закарпатской обл.).
+  
+ 
+  
+вг
+  
+ 
+  
+18:01:12 EET-2
+  
+ 
+  </PlainContent><FileSize>0</FileSize><ColorSpace/><HighResFile/><Encoding/><Compression/><KeyFrameEveryFrames>0</KeyFrameEveryFrames><Channels/><AspectRatio/></ContentMetaData><WorkflowMetaData><Deadline xsi:nil="true"/><Urgency/><Modifier>woodwing</Modifier><Modified>2013-04-09T18:01:32</Modified><Creator>woodwing</Creator><Created>2013-04-09T18:01:32</Created><Comment/><State><Id>143</Id><Name>News</Name><Type>Article</Type><Produce xsi:nil="true"/><Color>#a0a0a0</Color><DefaultRouteTo xsi:nil="true"/></State><RouteTo/><LockedBy xsi:nil="true"/><Version>0.1</Version><DeadlineSoft xsi:nil="true"/><Rating>0</Rating></WorkflowMetaData><ExtraMetaData><ExtraMetaData><Property>C_PAGE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PRICE</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_HEAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PAGENUM</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_SUBCATEGORY</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_TEMPLATES</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_PIAD</Property><Values><String>0</String></Values></ExtraMetaData><ExtraMetaData><Property>C_PDEADLINE</Property><Values><String/></Values></ExtraMetaData><ExtraMetaData><Property>C_DEADLINE</Property><Values><String/></Values></ExtraMetaData></ExtraMetaData></MetaData><Relations/><Pages/><Files><Attachment><Rendition>native</Rendition><Type>text/wwea</Type><Content href="cid:19f56a5be049a367a36650b16f17cd02"/><FileUrl xsi:nil="true"/><EditionId xsi:nil="true"/></Attachment></Files><Messages/><Elements><Element><ID>51C4392D-C183-49DA-B661-2B92B5D87F02</ID><Name>body</Name><LengthWords>527</LengthWords><LengthChars>3988</LengthChars><LengthParas>2</LengthParas><LengthLines>34</LengthLines><Snippet/><Version/><Content xsi:nil="true"/></Element><Element><ID>AD21D02E-F80E-4DEF-A3FB-5520A741A4AF</ID><Name>head</Name><LengthWords>16</LengthWords><LengthChars>117</LengthChars><LengthParas>1</LengthParas><LengthLines>1</LengthLines><Snippet>"Ивано-Франковскцемент" намерен построить 1-й в Украине завод по производству спеццементов мощностью 1 млн тонн в год</Snippet><Version/><Content xsi:nil="true"/></Element></Elements><Targets><Target><PubChannel><Id>14</Id><Name>News</Name></PubChannel><Issue><Id>97</Id><Name>Архив новостей</Name><OverrulePublication>false</OverrulePublication></Issue><Editions/><PublishedDate xsi:nil="true"/><PublishedVersion xsi:nil="true"/></Target></Targets><Renditions xsi:nil="true"/></Object></Objects></ns1:GetObjectsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
