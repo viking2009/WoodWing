@@ -283,7 +283,7 @@ class BizInDesignServerJobs
 		// insert our new job
 		if (!$exclusiveLock) $exclusiveLock = 0;
 		if (!$foreground) $foreground = 0;
-		if (!$objId) $objId = 'null';
+		if (!$objId) $objId = 0;
 		require_once BASEDIR.'/server/dbclasses/DBVersion.class.php';
 		$versionInfo = array();
 		DBVersion::splitMajorMinorVersion($serverVersion, $versionInfo);
