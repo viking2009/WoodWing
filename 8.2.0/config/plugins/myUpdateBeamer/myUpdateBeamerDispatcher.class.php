@@ -61,7 +61,7 @@ class myUpdateBeamerDispatcher{
             $types=array();
             $page=$res['pagenumber'];
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: page='.$page);
-            $JPEGsrc=$workspaceWE.$layoutId.(($i==1)?'':$i).'_'.$layEditionId.'.jpg';
+            $JPEGsrc=$workspaceWE.$layoutId.'_'.$layEditionId.(($i==1)?'':$i).'.jpg';
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: JPEGsrc='.$JPEGsrc);
             if (file_exists($JPEGsrc)) {
                 $dest=$layStorename.'-page'.$page;
@@ -143,7 +143,7 @@ class myUpdateBeamerDispatcher{
                 return false;
             }
         }
-        $previewfile=$workspaceID.$layoutId.'_'.$layEdition;
+        $previewfile=$workspaceID.$layoutId.'_'.$layEditionId;
         LogHandler::Log('myUpdateBeamer','DEBUG','previewfile='.$previewfile);
         require_once BASEDIR.'/server/bizclasses/BizInDesignServerJob.class.php';
         $requestUrl=MYUB_POSTPROCESS_LOC.'?id='.$layoutId.'&edition='.$layEditionId.'&success=';

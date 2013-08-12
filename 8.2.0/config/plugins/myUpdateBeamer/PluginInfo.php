@@ -19,7 +19,7 @@ class myUpdateBeamer_EnterprisePlugin extends EnterprisePlugin
 	{
 		$info = new PluginInfoData();
 		$info->DisplayName = 'myUpdateBeamer';
-		$info->Version     = 'v1.4'; // don't use PRODUCTVERSION
+		$info->Version     = 'v1.5'; // don't use PRODUCTVERSION
 		$info->Description = 'Update publication overview ( myUpdateBeamer )';
 		$info->Copyright   = '(c) 2011-2013 iCenter Ukraine LTD';
 		return $info;
