@@ -31,7 +31,7 @@ class myUpdateBeamerDispatcher{
         }
         return false;
     }
-    public static function postProcess($layoutId,$success,$message){
+    public static function postProcess($layoutId,$layEditionId,$success,$message){
         $dbDriver=DBDriverFactory::gen();
         if ($success!=1) {
             LogHandler::Log('myUpdateBeamer','ERROR','postProcess: myUpdateBeamer failed with message: '.$message);
@@ -118,7 +118,8 @@ class myUpdateBeamerDispatcher{
           rmdir($workspaceWE);
         }
     }
-    private static function queueLayoutObject($ticket,$layoutId){
+    private static function queueLayoutObject($ticket,$layoutId,$layEdition){
+        $layEditionId=$layEdition?$layEdition->Id:0;
         $now=md5('mv'.$layoutId);
         $workspaceWE=WEBEDITDIR."$now/";
         $workspaceID=WEBEDITDIRIDSERV."$now/";
@@ -134,11 +135,15 @@ class myUpdateBeamerDispatcher{
                 return false;
             }
         }
-        $previewfile=$workspaceID.$layoutId;
+        $previewfile=$workspaceID.$layoutId.'_'.$layEdition;
         LogHandler::Log('myUpdateBeamer','DEBUG','previewfile='.$previewfile);
         require_once BASEDIR.'/server/bizclasses/BizInDesignServerJob.class.php';
-        $requestUrl=MYUB_POSTPROCESS_LOC.'?id='.$layoutId.'&success=';
-        $scriptText='try{app.scriptPreferences.userInteractionLevel=UserInteractionLevels.neverInteract;}catch(e){}var mysession=app.entSession;var myuser=mysession.activeUser;if(myuser!="'.MYUB_USER.'"){try{app.entSession.login("'.MYUB_USER.'","'.MYUB_PASSWORD.'","'.MYUB_SERVER.'");}catch(err){app.performSimpleRequest("'.$requestUrl.'2&message=cannot%20logon%20myUpdateBeamer%20user");exit(0);}}try{myDoc=app.openObject("'.$layoutId.'",false);}catch(err){app.performSimpleRequest("'.$requestUrl.'3&message=cannot%20open%20layout%20'.$layoutId.'");exit(0);}app.consoleout("Generating [JPEG] for layoutId = '.$layoutId.'");try{exportfile=File("'.$previewfile.'.jpg");app.jpegExportPreferences.jpegExportRange=ExportRangeOrAllPages.exportAll;app.jpegExportPreferences.jpegQuality=JPEGOptionsQuality.maximum;app.jpegExportPreferences.exportResolution='.MYUB_JPEG_RESOLUTION.';myDoc.exportFile(ExportFormat.jpg,exportfile);}catch(err){app.performSimpleRequest("'.$requestUrl.'4&message=cannot%20generate%20layout%20previews");}app.consoleout("Generating [PDF] for layoutId = '.$layoutId.'");try{exportfile=File("'.$previewfile.'.pdf");app.pdfExportPreferences.pageRange=PageRange.allPages;myDoc.exportFile(ExportFormat.pdfType,exportfile,app.pdfExportPresets.item("'.MYUB_PDF_QUALITY.'"));for(docPages=0;docPages<myDoc.pages.length;docPages++){myPageName=""+(docPages+1);app.pdfExportPreferences.pageRange=myDoc.pages.item(docPages).name;exportfile=File("'.$previewfile.'"+myPageName+".pdf");myDoc.exportFile(ExportFormat.pdfType,exportfile,app.pdfExportPresets.item("'.MYUB_PDF_QUALITY.'"));}}catch(err){app.performSimpleRequest("'.$requestUrl.'5&message=cannot%20generate%20layout%20pdfs");myDoc.close(SaveOptions.no);exit(0);}myDoc.close(SaveOptions.no);app.performSimpleRequest("'.$requestUrl.'1&message=success");';
+        $requestUrl=MYUB_POSTPROCESS_LOC.'?id='.$layoutId.'&edition='.$layEditionId.'&success=';
+        $scriptText='try{app.scriptPreferences.userInteractionLevel=UserInteractionLevels.neverInteract;}catch(e){}var mysession=app.entSession;var myuser=mysession.activeUser;if(myuser!="'.MYUB_USER.'"){try{app.entSession.login("'.MYUB_USER.'","'.MYUB_PASSWORD.'","'.MYUB_SERVER.'");}catch(err){app.performSimpleRequest("'.$requestUrl.'2&message=cannot%20logon%20myUpdateBeamer%20user");exit(0);}}try{myDoc=app.openObject("'.$layoutId.'",false);}catch(err){app.performSimpleRequest("'.$requestUrl.'3&message=cannot%20open%20layout%20'.$layoutId.'");exit(0);}';
+        if ($layEditionId>0) {
+            $scriptText.='try{myDoc.activeEdition="'.$layEdition->Name.'";}catch(err){app.performSimpleRequest("'.$requestUrl.'4&message=cannot%20activate%20edition%20'.$layEditionId.'");myDoc.close(SaveOptions.no);exit(0);}';
+        }
+        $scriptText.='app.consoleout("Generating [JPEG] for layoutId = '.$layoutId.'");try{exportfile=File("'.$previewfile.'.jpg");app.jpegExportPreferences.jpegExportRange=ExportRangeOrAllPages.exportAll;app.jpegExportPreferences.jpegQuality=JPEGOptionsQuality.maximum;app.jpegExportPreferences.exportResolution='.MYUB_JPEG_RESOLUTION.';myDoc.exportFile(ExportFormat.jpg,exportfile);}catch(err){app.performSimpleRequest("'.$requestUrl.'4&message=cannot%20generate%20layout%20previews");}app.consoleout("Generating [PDF] for layoutId = '.$layoutId.'");try{exportfile=File("'.$previewfile.'.pdf");app.pdfExportPreferences.pageRange=PageRange.allPages;myDoc.exportFile(ExportFormat.pdfType,exportfile,app.pdfExportPresets.item("'.MYUB_PDF_QUALITY.'"));for(docPages=0;docPages<myDoc.pages.length;docPages++){myPageName=""+(docPages+1);app.pdfExportPreferences.pageRange=myDoc.pages.item(docPages).name;exportfile=File("'.$previewfile.'"+myPageName+".pdf");myDoc.exportFile(ExportFormat.pdfType,exportfile,app.pdfExportPresets.item("'.MYUB_PDF_QUALITY.'"));}}catch(err){app.performSimpleRequest("'.$requestUrl.'5&message=cannot%20generate%20layout%20pdfs");myDoc.close(SaveOptions.no);exit(0);}myDoc.close(SaveOptions.no);app.performSimpleRequest("'.$requestUrl.'1&message=success");';
         $jobId=BizInDesignServerJobs::createJob($scriptText,null,false,'myUpdateBeamer',$layoutId,false,'8.0');
         BizInDesignServerJobs::startBackgroundJobs();
     }
@@ -152,8 +157,14 @@ class myUpdateBeamerDispatcher{
             $layoutIds=array();
         }
         foreach($layoutIds as $layoutId){
-            if (self::getLayoutDetails($layoutId,$layName,$layStorename,$layVersion)) {
-                self::queueLayoutObject($ticket,$layoutId);
+            if (self::getLayoutDetails($layoutId,$layName,$layStorename,$layVersion,$layEditions)) {
+            	if (count($layEditions)>0) {
+            		foreach($layEditions as $layEdition){
+                	    self::queueLayoutObject($ticket,$layoutId,$layEdition);
+            		}
+        		} else {
+                	self::queueLayoutObject($ticket,$layoutId,null);
+        		}
             }
         }
     }
@@ -187,7 +198,14 @@ class myUpdateBeamerDispatcher{
         }
         return $parents;
     }
-    private static function getLayoutDetails($layoutId,&$layName,&$layStorename,&$layVersion){
+    private static function getLayoutDetails($layoutId,&$layName,&$layStorename,&$layVersion,&$layEditions){
+        require_once BASEDIR.'/server/bizclasses/BizTarget.class.php';
+        $targets=BizTarget::getTargets(null,$layoutId);
+        if (count($targets)!=1) {
+            LogHandler::Log('myUpdateBeamer','ERROR','Layout '.$layoutId.' is NOT bound to ONE issue. Target count = '.count($targets));
+            return false;
+        }
+        $layEditions=$targets[0]->Editions;
         $dbDriver=DBDriverFactory::gen();
         $dbobjects=$dbDriver->tablename("objects");
         $sql='select `name`, `storename`, `majorversion`, `minorversion` from '.$dbobjects.' where `id`='.$layoutId;

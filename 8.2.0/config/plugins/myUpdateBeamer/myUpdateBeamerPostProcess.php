@@ -4,6 +4,8 @@
 // LogHandler::Log('myUpdateBeamer', 'DEBUG', print_r($_REQUEST, true));
 
 $layoutId = $_REQUEST['id'];
+$layEditionId = $_REQUEST['edition'];
+
 $success = $_REQUEST['success'];
 
 $message = null;
@@ -14,5 +16,5 @@ if($message){
 
 require_once dirname(__FILE__) . '/../../config.php';
 require_once dirname(__FILE__) . '/myUpdateBeamerDispatcher.class.php';
-myUpdateBeamerDispatcher::postProcess( $layoutId, $success, $message );
+myUpdateBeamerDispatcher::postProcess( $layoutId, $layEditionId, $success, $message );
 
