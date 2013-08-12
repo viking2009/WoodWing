@@ -32,6 +32,7 @@ class myUpdateBeamerDispatcher{
         return false;
     }
     public static function postProcess($layoutId,$layEditionId,$success,$message){
+    	if(!$layEditionId) $layEditionId=0;
         $dbDriver=DBDriverFactory::gen();
         if ($success!=1) {
             LogHandler::Log('myUpdateBeamer','ERROR','postProcess: myUpdateBeamer failed with message: '.$message);
