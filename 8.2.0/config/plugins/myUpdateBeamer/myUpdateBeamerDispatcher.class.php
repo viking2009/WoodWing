@@ -43,8 +43,15 @@ class myUpdateBeamerDispatcher{
             LogHandler::Log('myUpdateBeamer','ERROR','postProcess: cannot get info for layout. Id='.$layoutId);
             return;
         }
+        
+        if ($layEditionId > 0) {
+        	$layEditionVersion = '-'.layEditionId.'.'.$layVersion;
+        } else {
+        	$layEditionVersion = '.'.$layVersion;
+        }
+        
         $dbpages=$dbDriver->tablename("pages");
-        $sql='select `pagenumber` from '.$dbpages.' where `objid`='.$layoutId.' and `instance` = \'Production\' order by `pageorder` asc';
+        $sql='select `pagenumber` from '.$dbpages.' where `objid`='.$layoutId.' and `edition`='.$layEditionId.' and `instance` = \'Production\' order by `pageorder` asc';
         $sth=$dbDriver->query($sql);
         $layTypes=array();
         $layTypes['native']='application/indesign';
@@ -53,16 +60,16 @@ class myUpdateBeamerDispatcher{
             $types=array();
             $page=$res['pagenumber'];
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: page='.$page);
-            $JPEGsrc=$workspaceWE.$layoutId.(($i==1)?'':$i).'.jpg';
+            $JPEGsrc=$workspaceWE.$layoutId.(($i==1)?'':$i).'_'.$layEditionId.'.jpg';
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: JPEGsrc='.$JPEGsrc);
             if (file_exists($JPEGsrc)) {
                 $dest=$layStorename.'-page'.$page;
                 LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: destination='.$dest);
-                if (self::convertFile($JPEGsrc,$dest.'-1.'.$layVersion,MYUB_SIZE_THUMB)) {
+                if (self::convertFile($JPEGsrc,$dest.'-1'.$layEditionVersion,MYUB_SIZE_THUMB)) {
                     $types[]=array('1','thumb','image/jpeg');
                     LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$dest.'-1.'.$layVersion);
                 }
-                if (copy($JPEGsrc,$dest.'-2.'.$layVersion)) {
+                if (copy($JPEGsrc,$dest.'-2'.$layEditionVersion)) {
                     $types[]=array('2','preview','image/jpeg');
                     LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$JPEGsrc.' to '.$dest.'-2.'.$layVersion);
                 }
@@ -79,19 +86,19 @@ class myUpdateBeamerDispatcher{
             } else {
                 LogHandler::Log('myUpdateBeamer','ERROR','postProcess: ERROR with InDesign Server, could not find image '.$JPEGsrc);
             }
-            $PDFsrc=$workspaceWE.$layoutId.$i.'.pdf';
+            $PDFsrc=$workspaceWE.$layoutId.'_'.$layEditionId.$i.'.pdf';
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: PDFsrc='.$PDFsrc);
             if (file_exists($PDFsrc)) {
                 $dest=$layStorename.'-page'.$page;
                 LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: destination='.$dest);
-                if (copy($PDFsrc,$dest.'-3.'.$layVersion)) {
+                if (copy($PDFsrc,$dest.'-3'.$layEditionVersion)) {
                     $types[]=array('3','output','application/pdf');
                     LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$dest.'-3.'.$layVersion);
                 }
             } else {
                 LogHandler::Log('myUpdateBeamer','ERROR','postProcess: ERROR with InDesign Server, could not find document '.$PDFsrc);
             }
-            $sql='update '.$dbpages.' set `types`=\''.serialize($types).'\' where `objid`='.$layoutId.' and `pagenumber`=\''.$page.'\'';
+            $sql='update '.$dbpages.' set `types`=\''.serialize($types).'\' where `objid`='.$layoutId.' and `edition`='.$layEditionId.' and `pagenumber`=\''.$page.'\'';
             $dbDriver->query($sql);
             $i++;
         }
