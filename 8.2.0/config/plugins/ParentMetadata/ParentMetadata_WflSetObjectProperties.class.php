@@ -21,8 +21,24 @@ class ParentMetadata_WflSetObjectProperties extends WflSetObjectProperties_Enter
 
 	final public function runAfter (WflSetObjectPropertiesRequest $req, WflSetObjectPropertiesResponse &$resp) 
 	{
-		#LogHandler::Log("ParentMetadata","DEBUG","ParentMetadata WflSetObjectProperties runAfter");
-		#LogHandler::Log("ParentMetadata","DEBUG", print_r($resp,true));
+		if ($resp->MetaData->BasicMetaData->Type == 'Dossier') {
+			$id = $resp->MetaData->BasicMetaData->ID;
+			
+			require_once dirname(__FILE__) . '/ParentMetadataUtils.class.php';
+			$relations = ParentMetadataUtils::getContainedChildren($id);
+			
+			if (count($relations) > 0) {
+				$ticket = $req->Ticket;
+			
+				foreach ($relations as $childId) {
+					$objectType = ParentMetadataUtils::getObjectType($childId);
+
+					if ($objectType == 'Article') {
+						ParentMetadataUtils::overruleObjectPropertiesForArticle($ticket, $childId, $resp->MetaData);
+					}
+				}
+			}
+		}
 	} 
 	
 	final public function runOverruled (WflSetObjectPropertiesRequest $req) {} 

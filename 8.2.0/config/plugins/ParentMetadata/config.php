@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 
 define ('PM_EXTRAMETADATA_KEYS', serialize( array(
-	'ARTICLEOVERRULETEST'
+	'C_ARTICLEOVERRULETEST'
 )));
 
 ?>
