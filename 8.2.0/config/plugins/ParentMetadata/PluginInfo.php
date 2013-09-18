@@ -19,7 +19,7 @@ class ParentMetadata_EnterprisePlugin extends EnterprisePlugin
 	{
 		$info = new PluginInfoData();
 		$info->DisplayName = 'ParentMetadata';
-		$info->Version     = 'v1.0a'; // don't use PRODUCTVERSION
+		$info->Version     = 'v1.0b'; // don't use PRODUCTVERSION
 		$info->Description = 'Overrule for dossier children metadata ( ParentMetadata )';
 		$info->Copyright   = '(c) 2013 iCenter Ukraine LTD';
 		return $info;
