@@ -11,6 +11,7 @@
 
 require_once BASEDIR.'/server/interfaces/plugins/EnterprisePlugin.class.php';
 require_once BASEDIR.'/server/interfaces/plugins/PluginInfoData.class.php';
+require_once BASEDIR.'/config/plugins/ParentMetadata/config.php';
 
 class ParentMetadata_EnterprisePlugin extends EnterprisePlugin
 {
