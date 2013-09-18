@@ -9,6 +9,8 @@
  * Overrule for dossier children metadata ( ParentMetadata )
  */
 
+require_once dirname(__FILE__) . '/config.php';
+
 class ParentMetadataUtils {
 
 	public static function getExtraMetaData($metaData, $key)
@@ -47,7 +49,7 @@ class ParentMetadataUtils {
         return $children;
     }
 	
-	 public static function overruleObjectProperties($ticket, $objectId, $extraMetadataForOverrule)
+	public static function overruleObjectProperties($ticket, $objectId, $extraMetadataForOverrule)
 	{
         require_once BASEDIR.'/server/protocols/soap/WflClient.php';
         $soapClient = new WW_SOAP_WflClient();
@@ -71,11 +73,11 @@ class ParentMetadataUtils {
 		
 		$object = $objects[0];
 		
-		try {			
-			$extraMetadataKeys = unserialize(PM_EXTRAMETADATA_KEYS);
-
+		try {
 			$objectMetaData = $object->MetaData;
 			if (isset($objectMetaData->ExtraMetaData)) {
+				$extraMetadataKeys = unserialize(PM_EXTRAMETADATA_KEYS);
+
 				foreach($objectMetaData->ExtraMetaData as &$extraMetaData) {
 					if(in_array($extraMetaData->Property, $extraMetadataKeys)) {
 						$newExtraMetaData = self::getExtraMetaData($extraMetadataForOverrule, $extraMetaData->Property);

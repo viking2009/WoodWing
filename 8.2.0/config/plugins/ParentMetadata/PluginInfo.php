@@ -27,8 +27,9 @@ class ParentMetadata_EnterprisePlugin extends EnterprisePlugin
 
 	final public function getConnectorInterfaces()
 	{
-		return array(	
+		return array(
 				'WflCreateObjectRelations_EnterpriseConnector',
+				'WflCreateObjects_EnterpriseConnector',
 				'WflSetObjectProperties_EnterpriseConnector'
 				);
 	}

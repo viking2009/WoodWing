@@ -11,6 +11,7 @@
 
 require_once BASEDIR . '/server/interfaces/services/wfl/WflCreateObjectRelations_EnterpriseConnector.class.php';
 require_once dirname(__FILE__) . '/config.php';
+require_once dirname(__FILE__) . '/ParentMetadataUtils.class.php';
 
 class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_EnterpriseConnector
 {
@@ -26,8 +27,6 @@ class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_E
 
 			foreach ($resp->Relations as $relation) {
 				if ($relation->Type == 'Contained') {
-					require_once dirname(__FILE__) . '/ParentMetadataUtils.class.php';
-
 					$parentObjectType = ParentMetadataUtils::getObjectType($relation->Parent);
 				
 					if ($parentObjectType == 'Dossier') {
@@ -35,7 +34,7 @@ class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_E
 						
 						$supportedFormats = unserialize(PM_SUPPORTED_FORMATS);
 
-						if ( in_array ($childObjectType, $supportedFormats) ) {
+						if (in_array($childObjectType, $supportedFormats)) {
 							$dossierId = $relation->Parent;
 							$objectId = $relation->Child;
 		
@@ -55,13 +54,11 @@ class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_E
 								//echo'Error returned from server: '.$e->getMessage()."\n";
 							}
 		
-							if (!$objects||count($objects)!=1) {
-								return;
-							}
-		
-							$dossier = $objects[0];
+							if (isset($objects) && count($objects) == 1) {
+								$dossier = $objects[0];
 							
-							ParentMetadataUtils::overruleObjectProperties($ticket, $objectId, $dossier->MetaData);
+								ParentMetadataUtils::overruleObjectProperties($ticket, $objectId, $dossier->MetaData);
+							}
 						}
 					}
 				}
