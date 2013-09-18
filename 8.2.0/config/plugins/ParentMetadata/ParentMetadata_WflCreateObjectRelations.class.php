@@ -9,7 +9,7 @@
  * Overrule for dossier children metadata ( ParentMetadata )
  */
 
-require_once BASEDIR . '/server/interfaces/services/Wfl/WflCreateObjectRelations_EnterpriseConnector.class.php';
+require_once BASEDIR . '/server/interfaces/services/wfl/WflCreateObjectRelations_EnterpriseConnector.class.php';
 require_once dirname(__FILE__) . '/config.php';
 
 class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_EnterpriseConnector
