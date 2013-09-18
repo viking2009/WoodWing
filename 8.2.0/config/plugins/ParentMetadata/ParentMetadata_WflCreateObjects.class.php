@@ -33,7 +33,6 @@ class ParentMetadata_WflCreateObjects extends WflCreateObjects_EnterpriseConnect
 
 					foreach ($resp->Relations as $relation) {
 						if ($relation->Type == 'Contained') {
-							// TODO: get object type from $relation->ParentInfo
 							$parentObjectType = ParentMetadataUtils::getObjectType($relation->Parent);
 				
 							if ($parentObjectType == 'Dossier') {
