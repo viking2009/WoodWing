@@ -40,12 +40,23 @@ function testParentMetadataConfig()
 	// The application server name determines ParentMetadata is enabled or not.
 	if( !defined('PM_EXTRAMETADATA_KEYS') )
 	{
-		$errors[] = "ParentMetadata is disabled. Define PM_EXTRAMETADATA_KEYS in configserver.php";
+		$errors[] = "ParentMetadata is disabled. Define PM_EXTRAMETADATA_KEYS in config.php";
 	} else {
 		$keys = unserialize(PM_EXTRAMETADATA_KEYS);
 		if ( !is_array($keys) || empty($keys) )
 		{
 			$errors[] = "ParentMetadata is disabled. Define PM_EXTRAMETADATA_KEYS as serialized array of extra metadata tags for overrule in config.php";
+		}
+	}
+
+	if( !defined('PM_SUPPORTED_FORMATS') )
+	{
+		$errors[] = "ParentMetadata is disabled. Define PM_SUPPORTED_FORMATS in config.php";
+	} else {
+		$formats = unserialize(PM_SUPPORTED_FORMATS);
+		if ( !is_array($formats) || empty($formats) )
+		{
+			$errors[] = "ParentMetadata is disabled. Define PM_SUPPORTED_FORMATS as serialized array of supported types for overrule in config.php";
 		}
 	}
 	

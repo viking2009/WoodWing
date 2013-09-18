@@ -47,12 +47,12 @@ class ParentMetadataUtils {
         return $children;
     }
 	
-	 public static function overruleObjectPropertiesForArticle($ticket, $articleId, $extraMetadataForOverrule)
+	 public static function overruleObjectProperties($ticket, $objectId, $extraMetadataForOverrule)
 	{
         require_once BASEDIR.'/server/protocols/soap/WflClient.php';
         $soapClient = new WW_SOAP_WflClient();
 
-		$IDs = array($articleId);
+		$IDs = array($objectId);
 		try {
 			require_once BASEDIR.'/server/interfaces/services/wfl/WflGetObjectsRequest.class.php';
 			require_once BASEDIR.'/server/interfaces/services/wfl/WflGetObjectsResponse.class.php';
@@ -74,9 +74,9 @@ class ParentMetadataUtils {
 		try {			
 			$extraMetadataKeys = unserialize(PM_EXTRAMETADATA_KEYS);
 
-			$articleMetaData = $object->MetaData;
-			if (isset($articleMetaData->ExtraMetaData)) {
-				foreach($articleMetaData->ExtraMetaData as &$extraMetaData) {
+			$objectMetaData = $object->MetaData;
+			if (isset($objectMetaData->ExtraMetaData)) {
+				foreach($objectMetaData->ExtraMetaData as &$extraMetaData) {
 					if(in_array($extraMetaData->Property, $extraMetadataKeys)) {
 						$newExtraMetaData = self::getExtraMetaData($extraMetadataForOverrule, $extraMetaData->Property);
 						$extraMetaData->Values = $newExtraMetaData->Values;
@@ -86,7 +86,7 @@ class ParentMetadataUtils {
 			
 			require_once BASEDIR.'/server/interfaces/services/wfl/WflSetObjectPropertiesRequest.class.php';
 			require_once BASEDIR.'/server/interfaces/services/wfl/WflSetObjectPropertiesResponse.class.php';
-			$setObjectPropertiesReq = new WflSetObjectPropertiesRequest($ticket, $articleId, $articleMetaData);
+			$setObjectPropertiesReq = new WflSetObjectPropertiesRequest($ticket, $objectId, $objectMetaData);
 			$soapClient->SetObjectProperties($setObjectPropertiesReq);
 		}
 		catch(BizException $e){

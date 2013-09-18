@@ -32,9 +32,12 @@ class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_E
 				
 					if ($parentObjectType == 'Dossier') {
 						$childObjectType = ParentMetadataUtils::getObjectType($relation->Child);
-						if ($childObjectType == 'Article') {
+						
+						$supportedFormats = unserialize(PM_SUPPORTED_FORMATS);
+
+						if ( in_array ($childObjectType, $supportedFormats) ) {
 							$dossierId = $relation->Parent;
-							$articleId = $relation->Child;
+							$objectId = $relation->Child;
 		
 							require_once BASEDIR.'/server/protocols/soap/WflClient.php';
 							$soapClient = new WW_SOAP_WflClient();
@@ -58,7 +61,7 @@ class ParentMetadata_WflCreateObjectRelations extends WflCreateObjectRelations_E
 		
 							$dossier = $objects[0];
 							
-							ParentMetadataUtils::overruleObjectPropertiesForArticle($ticket, $articleId, $dossier->MetaData);
+							ParentMetadataUtils::overruleObjectProperties($ticket, $objectId, $dossier->MetaData);
 						}
 					}
 				}

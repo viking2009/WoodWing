@@ -30,11 +30,13 @@ class ParentMetadata_WflSetObjectProperties extends WflSetObjectProperties_Enter
 			if (count($relations) > 0) {
 				$ticket = $req->Ticket;
 			
+				$supportedFormats = unserialize(PM_SUPPORTED_FORMATS);
+
 				foreach ($relations as $childId) {
 					$objectType = ParentMetadataUtils::getObjectType($childId);
 
-					if ($objectType == 'Article') {
-						ParentMetadataUtils::overruleObjectPropertiesForArticle($ticket, $childId, $resp->MetaData);
+					if ( in_array ($objectType, $supportedFormats) ) {
+						ParentMetadataUtils::overruleObjectProperties($ticket, $childId, $resp->MetaData);
 					}
 				}
 			}
