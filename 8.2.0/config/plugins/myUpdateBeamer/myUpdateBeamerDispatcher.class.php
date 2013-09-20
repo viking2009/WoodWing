@@ -38,7 +38,7 @@ class myUpdateBeamerDispatcher{
             return;
         }
         $now=md5('mv'.$layoutId);
-        $workspaceID=WEBEDITDIR."$now/";
+        $workspaceID=WEBEDITDIRIDSERV."$now/";
         if (!self::getLayoutDetails($layoutId,$layName,$layStorename,$layVersion)) {
             LogHandler::Log('myUpdateBeamer','ERROR','postProcess: cannot get info for layout. Id='.$layoutId);
             return;
