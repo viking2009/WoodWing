@@ -44,11 +44,13 @@ class myUpdateBeamerDispatcher{
             return;
         }
         
+        $prefix = $layoutId.'_'.$layEditionId;
+        
         if(!$layEditionId) $layEditionId=0;
         if ($layEditionId > 0) {
-        	$layEditionVersion = '-'.layEditionId.'.'.$layVersion;
+        	$suffix = '-'.$layEditionId.'.'.$layVersion;
         } else {
-        	$layEditionVersion = '.'.$layVersion;
+        	$suffix = '.'.$layVersion;
         }
         
         $dbpages=$dbDriver->tablename("pages");
@@ -61,40 +63,40 @@ class myUpdateBeamerDispatcher{
             $types=array();
             $page=$res['pagenumber'];
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: page='.$page);
-            $JPEGsrc=$workspaceWE.$layoutId.'_'.$layEditionId.(($i==1)?'':$i).'.jpg';
+            $JPEGsrc=$workspaceWE.$prefix.(($i==1)?'':$i).'.jpg';
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: JPEGsrc='.$JPEGsrc);
             if (file_exists($JPEGsrc)) {
                 $dest=$layStorename.'-page'.$page;
                 LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: destination='.$dest);
-                if (self::convertFile($JPEGsrc,$dest.'-1'.$layEditionVersion,MYUB_SIZE_THUMB)) {
+                if (self::convertFile($JPEGsrc,$dest.'-1'.$suffix,MYUB_SIZE_THUMB)) {
                     $types[]=array('1','thumb','image/jpeg');
-                    LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$dest.'-1.'.$layVersion);
+                    LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$dest.'-1'.$suffix);
                 }
-                if (copy($JPEGsrc,$dest.'-2'.$layEditionVersion)) {
+                if (copy($JPEGsrc,$dest.'-2'.$suffix)) {
                     $types[]=array('2','preview','image/jpeg');
-                    LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$JPEGsrc.' to '.$dest.'-2.'.$layVersion);
+                    LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$JPEGsrc.' to '.$dest.'-2'.$suffix);
                 }
                 if ($i==1) {
-                    if (self::convertFile($JPEGsrc,$layStorename.'-thumb.'.$layVersion,MYUB_SIZE_THUMB)) {
+                    if (self::convertFile($JPEGsrc,$layStorename.'-thumb'.$suffix,MYUB_SIZE_THUMB)) {
                         $layTypes['thumb']='image/jpeg';
-                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-thumb.'.$layVersion);
+                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-thumb'.$suffix);
                     }
-                    if (self::convertFile($JPEGsrc,$layStorename.'-preview.'.$layVersion,MYUB_SIZE_PREVIEW)) {
+                    if (self::convertFile($JPEGsrc,$layStorename.'-preview'.$suffix,MYUB_SIZE_PREVIEW)) {
                         $layTypes['preview']='image/jpeg';
-                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-preview.'.$layVersion);
+                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-preview'.$suffix);
                     }
                 }
             } else {
                 LogHandler::Log('myUpdateBeamer','ERROR','postProcess: ERROR with InDesign Server, could not find image '.$JPEGsrc);
             }
-            $PDFsrc=$workspaceWE.$layoutId.'_'.$layEditionId.$i.'.pdf';
+            $PDFsrc=$workspaceWE.$prefix.$i.'.pdf';
             LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: PDFsrc='.$PDFsrc);
             if (file_exists($PDFsrc)) {
                 $dest=$layStorename.'-page'.$page;
                 LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: destination='.$dest);
-                if (copy($PDFsrc,$dest.'-3'.$layEditionVersion)) {
+                if (copy($PDFsrc,$dest.'-3'.$suffix)) {
                     $types[]=array('3','output','application/pdf');
-                    LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$dest.'-3.'.$layVersion);
+                    LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$dest.'-3'.$suffix);
                 }
             } else {
                 LogHandler::Log('myUpdateBeamer','ERROR','postProcess: ERROR with InDesign Server, could not find document '.$PDFsrc);
@@ -103,10 +105,10 @@ class myUpdateBeamerDispatcher{
             $dbDriver->query($sql);
             $i++;
         }
-        $PDFsrc=$workspaceWE.$layoutId.'.pdf';
-        if (copy($PDFsrc,$layStorename.'-output.'.$layVersion)) {
+        $PDFsrc=$workspaceWE.$prefix.'.pdf';
+        if (copy($PDFsrc,$layStorename.'-output'.$suffix)) {
             $layTypes['output']='application/pdf';
-            LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$layStorename.'-output.'.$layVersion);
+            LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$layStorename.'-output'.$suffix);
         }
         $dbobjects=$dbDriver->tablename("objects");
         $sql='update '.$dbobjects.' set `types`=\''.serialize($layTypes).'\' where `id`='.$layoutId;
