@@ -77,13 +77,13 @@ class myUpdateBeamerDispatcher{
                     LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$JPEGsrc.' to '.$dest.'-2'.$suffix);
                 }
                 if ($i==1) {
-                    if (self::convertFile($JPEGsrc,$layStorename.'-thumb'.$suffix,MYUB_SIZE_THUMB)) {
+                    if (self::convertFile($JPEGsrc,$layStorename.'-thumb.'.$layVersion,MYUB_SIZE_THUMB)) {
                         $layTypes['thumb']='image/jpeg';
-                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-thumb'.$suffix);
+                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-thumb.'.$layVersion);
                     }
-                    if (self::convertFile($JPEGsrc,$layStorename.'-preview'.$suffix,MYUB_SIZE_PREVIEW)) {
+                    if (self::convertFile($JPEGsrc,$layStorename.'-preview.'.$layVersion,MYUB_SIZE_PREVIEW)) {
                         $layTypes['preview']='image/jpeg';
-                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-preview'.$suffix);
+                        LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: converted '.$JPEGsrc.' to '.$layStorename.'-preview.'.$layVersion);
                     }
                 }
             } else {
@@ -106,9 +106,9 @@ class myUpdateBeamerDispatcher{
             $i++;
         }
         $PDFsrc=$workspaceWE.$prefix.'.pdf';
-        if (copy($PDFsrc,$layStorename.'-output'.$suffix)) {
+        if (copy($PDFsrc,$layStorename.'-output.'.$layVersion)) {
             $layTypes['output']='application/pdf';
-            LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$layStorename.'-output'.$suffix);
+            LogHandler::Log('myUpdateBeamer','DEBUG','postProcess: copied '.$PDFsrc.' to '.$layStorename.'-output.'.$layVersion);
         }
         $dbobjects=$dbDriver->tablename("objects");
         $sql='update '.$dbobjects.' set `types`=\''.serialize($layTypes).'\' where `id`='.$layoutId;
