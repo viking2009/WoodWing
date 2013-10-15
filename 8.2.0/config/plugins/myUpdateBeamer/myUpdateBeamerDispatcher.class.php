@@ -44,9 +44,8 @@ class myUpdateBeamerDispatcher{
             return;
         }
         
-        $prefix = $layoutId.'_'.$layEditionId;
-        
         if(!$layEditionId) $layEditionId=0;
+        $prefix = $layoutId.'_'.$layEditionId;
         if ($layEditionId > 0) {
         	$suffix = '-'.$layEditionId.'.'.$layVersion;
         } else {
@@ -54,7 +53,7 @@ class myUpdateBeamerDispatcher{
         }
         
         $dbpages=$dbDriver->tablename("pages");
-        $sql='select `pagenumber` from '.$dbpages.' where `objid`='.$layoutId.' and `edition`='.$layEditionId.' and `instance` = \'Production\' order by `pageorder` asc';
+        $sql='select `pagenumber` from '.$dbpages.' where `objid`='.$layoutId.' and (`edition`=0 or `edition`='.$layEditionId.') and `instance` = \'Production\' order by `pageorder` asc';
         $sth=$dbDriver->query($sql);
         $layTypes=array();
         $layTypes['native']='application/indesign';
@@ -101,7 +100,7 @@ class myUpdateBeamerDispatcher{
             } else {
                 LogHandler::Log('myUpdateBeamer','ERROR','postProcess: ERROR with InDesign Server, could not find document '.$PDFsrc);
             }
-            $sql='update '.$dbpages.' set `types`=\''.serialize($types).'\' where `objid`='.$layoutId.' and `edition`='.$layEditionId.' and `pagenumber`=\''.$page.'\'';
+            $sql='update '.$dbpages.' set `types`=\''.serialize($types).'\' where `objid`='.$layoutId.' and (`edition`=0 or `edition`='.$layEditionId.') and `pagenumber`=\''.$page.'\'';
             $dbDriver->query($sql);
             $i++;
         }
